@@ -40,7 +40,6 @@ export function main(text: string, key: string) {
         }
         let round = 5;
         while (round--) {
-            console.log(matrixKey[1], "before");
             const mixingConstants = [
                 [0x02, 0x03, 0x01, 0x01],
                 [0x01, 0x02, 0x03, 0x01],
@@ -55,17 +54,19 @@ export function main(text: string, key: string) {
                     matrix[i][j] = subbed;
                 }
             }
-            //console.log(matrix, "after");
+            
 
-            matrix = MixColumns(matrix, mixingConstants, matrixKey[5 - round]);
-
+            matrix = MixColumns(matrix, mixingConstants, matrixKey[4 - round]);
+            
+            console.log(matrix, "before");
             for (let i = 0; i < 4; i++) {
                 for (let j = 0; j < 4; j++) {
-                    matrix[i][j] ^= matrixKey[5 - round][i][j];
+                    matrix[i][j] ^= matrixKey[4 - round][i][j];
                 }
             }
+            console.log(matrix, "after");
 
-            matrix = SwapBytes(matrix, matrixKey[5 - round]);
+            matrix = SwapBytes(matrix, matrixKey[4 - round]);
             
         }
 

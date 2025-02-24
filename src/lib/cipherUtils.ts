@@ -35,21 +35,23 @@ export function ShiftBits(byteinput: number, keybyte: number, shift: number, inv
 
 export function ShiftColumns(matrix: number[][], inv = false): number[][] {
     if (!inv) {
+
         for (let i = 0; i < matrix.length; i++) {
-                const temp1 = matrix[i][0];
-                matrix[i][0] = matrix[i][1];
-                matrix[i][1] = matrix[i][2];
-                matrix[i][2] = matrix[i][3];
-                matrix[i][3] = temp1;
+            for (let j = 0; j < matrix[i].length-1; j++) {
+                const temp = matrix[i][j];
+                matrix[i][j] = matrix[i][j+1]
+                matrix[i][j+1] = temp;
+            }
         }
+
     } else {
         for (let i = 0; i < matrix.length; i++) {
-            const temp1 = matrix[i][3];
-            matrix[i][3] = matrix[i][2];
-            matrix[i][2] = matrix[i][1];
-            matrix[i][1] = matrix[i][0];
-            matrix[i][0] = temp1;
-    }
+            for (let j = matrix[i].length-1; j > 0; j--) {
+                const temp = matrix[i][j];
+                matrix[i][j] = matrix[i][j-1]
+                matrix[i][j-1] = temp;
+            }
+        }
     }
     return matrix;
 }
@@ -60,21 +62,23 @@ export function SubBytes(byte: number, inv = false): number {
 }
 
 export function MixColumns(state: number[][], miningConstants: number[][], key: number[][], inv = false): number[][] {
-    const temp = Array.from({ length: 4 }, () => Array(4).fill(0x00));
+    let temp = Array.from({ length: 4 }, () => Array(4).fill(0x00));
     if (inv)
         for (let i = 0; i < 4; i++)
             for (let j = 0; j < 4; j++)
                 state[i][j] = state[i][j] ^ key[i][3 - j];
-    state = ShiftColumns(state, inv);
+    state = structuredClone(ShiftColumns(state, inv));
     for (let c = 0; c < 4; c++) {
         for (let i = 0; i < 4; i++) {
             temp[i][c] = gmul(state[0][c], miningConstants[i][0]) ^ gmul(state[1][c], miningConstants[i][1]) ^ gmul(state[2][c], miningConstants[i][2]) ^ gmul(state[3][c], miningConstants[i][3]);
         }
     }
-    state = ShiftColumns(state, inv);
-    for (let i = 0; i < 4; i++)
-        for (let j = 0; j < 4; j++)
-            state[i][j] = inv ? temp[i][j] : temp[i][j] ^ key[i][3 - j];
+    temp = structuredClone(ShiftColumns(temp, inv));
+    let tempCopy = temp.map(row => [...row]);
+    for (let i = 0; i < 4; i++) 
+        for (let j = 0; j < 4; j++) 
+            state[i][j] = (tempCopy[i][j] ^ key[i][3 - j]) & 0xFF;   // ✅ XOR + 8-bit masking
+
     return state;
 }
 
