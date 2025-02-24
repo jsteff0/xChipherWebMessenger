@@ -1,27 +1,3 @@
-<script lang="ts">
-	import { onMount } from "svelte";
-	import { encript, decript } from "$lib/main";
-	onMount(() => {
-
-		setTimeout(() => {
-			const msgcontainer = document.getElementById("msgcontainer");
-			const msg2 = document.getElementById("msg2");
-			if (msg2 && msgcontainer) {
-				msg2.style.display = "flex";
-				msgcontainer.scrollTop = msgcontainer.scrollHeight;
-			}
-		}, 1500);
-		setTimeout(() => {
-			const msgcontainer = document.getElementById("msgcontainer");
-			const msg3 = document.getElementById("msg3");
-			if (msg3 && msgcontainer) {
-				msg3.style.display = "flex";
-				msgcontainer.scrollTop = msgcontainer.scrollHeight;
-			}
-		}, 3000);
-	});
-</script>
-
 <div
 	class="pt-[15px] w-[390px] h-[530px] bg-[#dedfda] rounded-[36px] overflow-clip shadow-[0px_18px_40px_0px_rgba(36,60,74,0.45)] flex-col justify-start items-center inline-flex"
 >
