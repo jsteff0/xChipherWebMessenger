@@ -12,24 +12,26 @@ export function gmul(a: number, b: number): number {
     return p;
 }
 
-export function ShiftBits(byteinput: number, keybyte: number, shift: number, inv = false): number {
-    let newbyte;
+export function ShiftBits(byteinput: number, keybyte: number, shift: number, inv: boolean = false): number {
+    let newbyte: number;
+
     if (!inv) {
-        if (keybyte % 2 === 0) {
-            newbyte = (byteinput << shift) | (byteinput >> (8 - shift));
-        } else {
-            newbyte = (byteinput >> shift) | (byteinput << (8 - shift));
-        }
+        if (keybyte % 2 === 0)
+            newbyte = ((byteinput << shift) | (byteinput >> (8 - shift))) & 0xFF;  // ✅ Mask to 8 bits
+        else
+            newbyte = ((byteinput >> shift) | (byteinput << (8 - shift))) & 0xFF;
     } else {
-        if (keybyte % 2 === 0) {
-            newbyte = (byteinput >> shift) | (byteinput << (8 - shift));
-        } else {
-            newbyte = (byteinput << shift) | (byteinput >> (8 - shift));
-        }
+        if (keybyte % 2 === 0)
+            newbyte = ((byteinput >> shift) | (byteinput << (8 - shift))) & 0xFF;
+        else
+            newbyte = ((byteinput << shift) | (byteinput >> (8 - shift))) & 0xFF;
     }
-    console.log(newbyte, "newbyte", byteinput, "byteinput", keybyte, "keybyte");
+
     return newbyte;
 }
+
+
+
 
 export function ShiftColumns(matrix: number[][], inv = false): number[][] {
     if (!inv) {

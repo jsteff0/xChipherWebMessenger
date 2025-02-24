@@ -24,10 +24,6 @@ export function main(text: string, key: string) {
     for (let round = 1; round < 6; round++) {
         matrixKey[round] = structuredClone(KeyExpansion(matrixKey[round - 1])); // ✅ Deep copy each new round key
     }
-    
-
-    
-
 
     let ciphertext = '';
 
