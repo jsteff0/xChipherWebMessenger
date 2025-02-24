@@ -24,7 +24,6 @@ export function main(text: string, key: string) {
     for (let round = 1; round < 6; round++) {
         matrixKey[round] = KeyExpansion(matrixKey[round - 1]);
     }
-    console.log(matrixKey[1]);
 
     let ciphertext = '';
 

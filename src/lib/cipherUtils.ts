@@ -48,7 +48,6 @@ export function ShiftColumns(matrix: number[][], inv = false): number[][] {
 }
 
 export function SubBytes(byte: number, inv = false): number {
-    console.log(sbox[byte])
     if (!inv) return sbox[byte];
     else return invSBox[byte];
 }
@@ -74,10 +73,10 @@ export function MixColumns(state: number[][], miningConstants: number[][], key: 
 
 export function KeyExpansion(matrixKey: number[][]): number[][] {
     const temp = matrixKey[0][3];
-    matrixKey[0][3] = matrixKey[3][3];
-    matrixKey[3][3] = matrixKey[2][3];
-    matrixKey[2][3] = matrixKey[1][3];
-    matrixKey[1][3] = temp;
+    matrixKey[0][3] = matrixKey[1][3];
+    matrixKey[1][3] = matrixKey[2][3];
+    matrixKey[2][3] = matrixKey[3][3];
+    matrixKey[3][3] = temp;
     
     matrixKey[0][0] = matrixKey[0][3] ^ matrixKey[0][0];
     matrixKey[1][0] = matrixKey[1][3] ^ matrixKey[1][0];
