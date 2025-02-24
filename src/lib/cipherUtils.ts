@@ -32,17 +32,21 @@ export function ShiftBits(byteinput: number, keybyte: number, shift: number, inv
 
 export function ShiftColumns(matrix: number[][], inv = false): number[][] {
     if (!inv) {
-        for (let i = 0; i < 4; i++) {
-            for (let j = 0; j < 3; j++) {
-                [matrix[i][j], matrix[i][j + 1]] = [matrix[i][j + 1], matrix[i][j]];
-            }
+        for (let i = 0; i < matrix.length; i++) {
+                const temp1 = matrix[i][0];
+                matrix[i][0] = matrix[i][1];
+                matrix[i][1] = matrix[i][2];
+                matrix[i][2] = matrix[i][3];
+                matrix[i][3] = temp1;
         }
     } else {
-        for (let i = 0; i < 4; i++) {
-            for (let j = 3; j > 0; j--) {
-                [matrix[i][j], matrix[i][j - 1]] = [matrix[i][j - 1], matrix[i][j]];
-            }
-        }
+        for (let i = 0; i < matrix.length; i++) {
+            const temp1 = matrix[i][3];
+            matrix[i][3] = matrix[i][2];
+            matrix[i][2] = matrix[i][1];
+            matrix[i][1] = matrix[i][0];
+            matrix[i][0] = temp1;
+    }
     }
     return matrix;
 }
@@ -77,7 +81,7 @@ export function KeyExpansion(matrixKey: number[][]): number[][] {
     matrixKey[1][3] = matrixKey[2][3];
     matrixKey[2][3] = matrixKey[3][3];
     matrixKey[3][3] = temp;
-    
+
     matrixKey[0][0] = matrixKey[0][3] ^ matrixKey[0][0];
     matrixKey[1][0] = matrixKey[1][3] ^ matrixKey[1][0];
     matrixKey[2][0] = matrixKey[2][3] ^ matrixKey[2][0];
