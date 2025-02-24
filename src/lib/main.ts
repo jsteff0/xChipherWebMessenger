@@ -1,17 +1,15 @@
 import { ShiftBits, SubBytes, MixColumns, KeyExpansion, SwapBytes } from './cipherUtils';
 
-export function main(text: string, key: string) {
+export function encript(text: string, key: string) {
     if (key.length !== 32) {
         console.log('Key must be 32 characters');
         return;
     }
-
-    console.log(text, key);
     const hextext = text.split('').map(char => char.charCodeAt(0));
 
     let matrixKey = Array.from({ length: 1 }, () => Array.from({ length: 4 }, () => Array(4).fill(0x00)));
 
-    // 🔹 Correcting Key Initialization
+
     for (let i = 0, forMatrix = 0; i < 4; i++) {
         for (let j = 0; j < 4; j++, forMatrix += 2) {
             const byteString = key.substr(forMatrix, 2);
@@ -19,7 +17,7 @@ export function main(text: string, key: string) {
             matrixKey[0][i][j] = byte;
         }
     }
-    // 🔹 Proper Key Expansion for 5 rounds
+
 
     for (let round = 1; round < 6; round++) {
         matrixKey[round] = structuredClone(KeyExpansion(matrixKey[round - 1])); // ✅ Deep copy each new round key
@@ -77,9 +75,24 @@ export function main(text: string, key: string) {
     }
 
     console.log('Your ciphertext is ' + ciphertext);
+    return ciphertext
+}
+export function decript(ciphertext: string, key: string) {
 
     let plaintext = '';
+    let matrixKey = Array.from({ length: 1 }, () => Array.from({ length: 4 }, () => Array(4).fill(0x00)));
+    for (let i = 0, forMatrix = 0; i < 4; i++) {
+        for (let j = 0; j < 4; j++, forMatrix += 2) {
+            const byteString = key.substr(forMatrix, 2);
+            const byte = parseInt(byteString, 16);
+            matrixKey[0][i][j] = byte;
+        }
+    }
 
+
+    for (let round = 1; round < 6; round++) {
+        matrixKey[round] = structuredClone(KeyExpansion(matrixKey[round - 1])); // ✅ Deep copy each new round key
+    }
     for (let block = 0; block < ciphertext.length; block += 32) {
         let matrix = Array.from({ length: 4 }, () => Array(4).fill(0x00));
 
@@ -130,4 +143,5 @@ export function main(text: string, key: string) {
     }
 
     console.log('Your plaintext is ' + plaintext);
+    return plaintext;
 }

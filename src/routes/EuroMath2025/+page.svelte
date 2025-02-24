@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from "svelte";
-	import { main } from "$lib/main";
-	main("qwertyuiop", "a1f4c5b3d9e0872fb4c1a2d3e5f60789");
+	import { encript, decript } from "$lib/main";
+	//encript("qwertyuiop", "a1f4c5b3d9e0872fb4c1a2d3e5f60789");
 	onMount(() => {
 
 		setTimeout(() => {
@@ -69,9 +69,10 @@
 					class="px-5 py-2.5 bg-[#243c4a] overflow-hidden h-auto rounded-[15px]"
 				>
 					<p
+						id="textmsg2"
 						class="text-white text-[16px] font-normal font-['Montserrat'] break-all"
 					>
-						40d137e9280b9f36542de0096d06c6759ce7d1a55f97ed92b68ea11f397112b50f0e11bf28570f1e3dc41d1f3c9b479c
+					0b0801b9aded4864df220cfa157415089ea02b3499989956d536555cf1d5455a
 					</p>
 				</div>
 			</div>
@@ -137,9 +138,10 @@
 					class="px-5 py-2.5 bg-[#243c4a] overflow-hidden h-auto rounded-[15px]"
 				>
 					<p
+						id="textmsg5"
 						class="text-white text-[16px] font-normal font-['Montserrat'] break-words"
 					>
-						Your message is: I'm glad to represent my school here
+						
 					</p>
 				</div>
 			</div>
@@ -206,9 +208,9 @@
 					class="px-5 py-2.5 bg-[#243c4a] overflow-hidden h-auto rounded-[15px]"
 				>
 					<p
-						class="text-white text-[16px] font-normal font-['Montserrat'] break-words"
+						id="textmsg8"
+						class="text-white text-[16px] font-normal font-['Montserrat'] break-all"
 					>
-						Your message is: some kind of text
 					</p>
 				</div>
 			</div>
@@ -244,20 +246,23 @@
 				const msg = document.getElementById(
 					"messege",
 				) as HTMLInputElement;
+				const textmsg2 = document.getElementById("textmsg2");
 				const textmsg4 = document.getElementById("textmsg4");
 				const textmsg7 = document.getElementById("textmsg7");
 				const msg4 = document.getElementById("msg4");
 				const msg7 = document.getElementById("msg7");
-				if (msg && msgcontainer && textmsg4 && msg4 && msg7 && textmsg7) {
+				if (msg && msgcontainer && textmsg4 && msg4 && msg7 && textmsg7 && textmsg2) {
 					if (msg4.style.display != "flex") {
-						textmsg4.innerText = msg.value;
+						const key = msg.value
 						msg.value = "";
+						textmsg4.innerText = key;
 						msg4.style.display = "flex";
 						msgcontainer.scrollTop = msgcontainer.scrollHeight;
 						setTimeout(() => {
 							const msg5 = document.getElementById("msg5");
-							if (msg5) {
-								//here we can decrypt the message
+							const textmsg5 = document.getElementById("textmsg5");
+							if (msg5 && textmsg5) {
+								textmsg5.innerText = "Your message is: "+decript(textmsg2.innerText, key);
 								msg5.style.display = "flex";
 								msgcontainer.scrollTop =
 									msgcontainer.scrollHeight;
@@ -272,14 +277,16 @@
 							}
 						}, 4000);
 					} else {
-						textmsg7.innerText = msg.value;
-						msg7.style.display = "flex";
+						const key = msg.value
 						msg.value = "";
+						textmsg7.innerText = key;
+						msg7.style.display = "flex";
 						msgcontainer.scrollTop = msgcontainer.scrollHeight;
 						setTimeout(() => {
 							const msg8 = document.getElementById("msg8");
-							if (msg8) {
-								//here we can decrypt the message
+							const textmsg8 = document.getElementById("textmsg8");
+							if (msg8 && textmsg8) {
+								textmsg8.innerText = "Your message is: "+decript(textmsg2.innerText, key);
 								msg8.style.display = "flex";
 								msgcontainer.scrollTop =
 									msgcontainer.scrollHeight;
