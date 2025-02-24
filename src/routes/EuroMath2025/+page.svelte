@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from "svelte";
 	import { main } from "$lib/main";
-	//main2("qwertyuiop", "a1f4c5b3d9e0872fb4c1a2d3e5f60789");
+	main("qwertyuiop", "a1f4c5b3d9e0872fb4c1a2d3e5f60789");
 	onMount(() => {
 
 		setTimeout(() => {
