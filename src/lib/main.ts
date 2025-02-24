@@ -9,7 +9,7 @@ export function main(text: string, key: string) {
     console.log(text, key);
     const hextext = text.split('').map(char => char.charCodeAt(0));
 
-    let matrixKey = Array.from({ length: 6 }, () => Array.from({ length: 4 }, () => Array(4).fill(0x00)));
+    let matrixKey = Array.from({ length: 1 }, () => Array.from({ length: 4 }, () => Array(4).fill(0x00)));
 
     // 🔹 Correcting Key Initialization
     for (let i = 0, forMatrix = 0; i < 4; i++) {
@@ -19,17 +19,21 @@ export function main(text: string, key: string) {
             matrixKey[0][i][j] = byte;
         }
     }
-
     // 🔹 Proper Key Expansion for 5 rounds
+
     for (let round = 1; round < 6; round++) {
-        matrixKey[round] = KeyExpansion(matrixKey[round - 1]);
+        matrixKey[round] = structuredClone(KeyExpansion(matrixKey[round - 1])); // ✅ Deep copy each new round key
     }
+    
+
+    
+
 
     let ciphertext = '';
 
     for (let block = 0; block < hextext.length; block += 16) {
         let matrix = Array.from({ length: 4 }, () => Array(4).fill(0x00));
-
+        
         for (let u = block, i = 0, j = 0; u < hextext.length && u < block + 16; u++) {
             if (j === 4) {
                 i++;
@@ -38,23 +42,24 @@ export function main(text: string, key: string) {
             matrix[i][j] = hextext[u];
             j++;
         }
-
         let round = 5;
         while (round--) {
+            console.log(matrixKey[1], "before");
             const mixingConstants = [
                 [0x02, 0x03, 0x01, 0x01],
                 [0x01, 0x02, 0x03, 0x01],
                 [0x01, 0x01, 0x02, 0x03],
                 [0x03, 0x01, 0x01, 0x02]
             ];
-
+            
             for (let i = 0; i < 4; i++) {
                 for (let j = 0; j < 4; j++) {
-                    const shifted = ShiftBits(matrix[i][j], matrixKey[5 - round][i][j], (i * 4 + j) % 8);
+                    const shifted = ShiftBits(matrix[i][j], matrixKey[4 - round][i][j], (i * 4 + j) % 8);
                     const subbed = SubBytes(shifted);
                     matrix[i][j] = subbed;
                 }
             }
+            //console.log(matrix, "after");
 
             matrix = MixColumns(matrix, mixingConstants, matrixKey[5 - round]);
 
@@ -65,6 +70,7 @@ export function main(text: string, key: string) {
             }
 
             matrix = SwapBytes(matrix, matrixKey[5 - round]);
+            
         }
 
         let ss = '';

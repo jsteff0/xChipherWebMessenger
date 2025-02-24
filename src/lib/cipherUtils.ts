@@ -27,6 +27,7 @@ export function ShiftBits(byteinput: number, keybyte: number, shift: number, inv
             newbyte = (byteinput << shift) | (byteinput >> (8 - shift));
         }
     }
+    console.log(newbyte, "newbyte", byteinput, "byteinput", keybyte, "keybyte");
     return newbyte;
 }
 
@@ -82,26 +83,28 @@ export function KeyExpansion(matrixKey: number[][]): number[][] {
     matrixKey[2][3] = matrixKey[3][3];
     matrixKey[3][3] = temp;
 
+    
     matrixKey[0][0] = matrixKey[0][3] ^ matrixKey[0][0];
     matrixKey[1][0] = matrixKey[1][3] ^ matrixKey[1][0];
     matrixKey[2][0] = matrixKey[2][3] ^ matrixKey[2][0];
     matrixKey[3][0] = matrixKey[3][3] ^ matrixKey[3][0];
-
+    
+    
     matrixKey[0][1] = matrixKey[0][0] ^ SubBytes(matrixKey[0][0]);
     matrixKey[1][1] = matrixKey[1][0] ^ SubBytes(matrixKey[1][0]);
     matrixKey[2][1] = matrixKey[2][0] ^ SubBytes(matrixKey[2][0]);
     matrixKey[3][1] = matrixKey[3][0] ^ SubBytes(matrixKey[3][0]);
-
+    
     matrixKey[0][2] = matrixKey[0][1] ^ SubBytes(matrixKey[0][1]);
     matrixKey[1][2] = matrixKey[1][1] ^ SubBytes(matrixKey[1][1]);
     matrixKey[2][2] = matrixKey[2][1] ^ SubBytes(matrixKey[2][1]);
     matrixKey[3][2] = matrixKey[3][1] ^ SubBytes(matrixKey[3][1]);
-
+   
+    
     matrixKey[0][3] = matrixKey[0][2] ^ (SubBytes(matrixKey[0][0]) ^ matrixKey[0][0]);
     matrixKey[1][3] = matrixKey[1][2] ^ (SubBytes(matrixKey[1][0]) ^ matrixKey[1][0]);
     matrixKey[2][3] = matrixKey[2][2] ^ (SubBytes(matrixKey[2][0]) ^ matrixKey[2][0]);
     matrixKey[3][3] = matrixKey[3][2] ^ (SubBytes(matrixKey[3][0]) ^ matrixKey[3][0]);
-
     for (let i = 0; i < 4; i++) {
         for (let j = 0; j < 4; j++) {
             matrixKey[i][j] = SubBytes(matrixKey[i][j]);
