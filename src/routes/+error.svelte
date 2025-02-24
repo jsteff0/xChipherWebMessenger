@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { onMount } from "svelte";
 	import { encript, decript } from "$lib/main";
-	//encript("qwertyuiop", "a1f4c5b3d9e0872fb4c1a2d3e5f60789");
 	onMount(() => {
 
 		setTimeout(() => {

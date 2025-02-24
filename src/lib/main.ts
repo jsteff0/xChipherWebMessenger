@@ -74,7 +74,7 @@ export function encript(text: string, key: string) {
         ciphertext += ss;
     }
 
-    console.log('Your ciphertext is ' + ciphertext);
+    //console.log('Your ciphertext is ' + ciphertext);
     return ciphertext
 }
 export function decript(ciphertext: string, key: string) {
@@ -142,6 +142,6 @@ export function decript(ciphertext: string, key: string) {
         }
     }
 
-    console.log('Your plaintext is ' + plaintext);
+    //console.log('Your plaintext is ' + plaintext);
     return plaintext;
 }

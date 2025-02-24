@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { onMount } from "svelte";
-	import { encript, decript } from "$lib/main";
-	//encript("qwertyuiop", "a1f4c5b3d9e0872fb4c1a2d3e5f60789");
+	import { decript } from "$lib/main";
 	onMount(() => {
 
 		setTimeout(() => {
@@ -233,7 +232,6 @@
 		/>
 
 		<button
-
 			class="px-[18px] py-2 bg-[#243c4a] rounded-[14px] justify-center items-center gap-2.5 flex overflow-hidden"
 			onkeydown={async (e) => {
 				if (e.key !== 'Enter') return;
@@ -252,6 +250,10 @@
 				const msg4 = document.getElementById("msg4");
 				const msg7 = document.getElementById("msg7");
 				if (msg && msgcontainer && textmsg4 && msg4 && msg7 && textmsg7 && textmsg2) {
+					if (msg.value.length !== 32) {
+						alert("The message must be 32 characters long.");
+						return;
+					}
 					if (msg4.style.display != "flex") {
 						const key = msg.value
 						msg.value = "";
