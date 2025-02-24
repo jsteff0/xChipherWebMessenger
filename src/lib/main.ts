@@ -46,7 +46,6 @@ export function main(text: string, key: string) {
                 [0x01, 0x01, 0x02, 0x03],
                 [0x03, 0x01, 0x01, 0x02]
             ];
-            
             for (let i = 0; i < 4; i++) {
                 for (let j = 0; j < 4; j++) {
                     const shifted = ShiftBits(matrix[i][j], matrixKey[4 - round][i][j], (i * 4 + j) % 8);
@@ -58,13 +57,11 @@ export function main(text: string, key: string) {
 
             matrix = MixColumns(matrix, mixingConstants, matrixKey[4 - round]);
             
-            console.log(matrix, "before");
             for (let i = 0; i < 4; i++) {
                 for (let j = 0; j < 4; j++) {
                     matrix[i][j] ^= matrixKey[4 - round][i][j];
                 }
             }
-            console.log(matrix, "after");
 
             matrix = SwapBytes(matrix, matrixKey[4 - round]);
             
@@ -105,22 +102,21 @@ export function main(text: string, key: string) {
                 [0x0d, 0x09, 0x0e, 0x0b],
                 [0x0b, 0x0d, 0x09, 0x0e]
             ];
-
             // 🔹 Fixing Decryption Order
-            matrix = SwapBytes(matrix, matrixKey[round + 1], true);
-
+            
+            matrix = SwapBytes(matrix, matrixKey[round], true);
+            
+            
             for (let i = 0; i < 4; i++) {
                 for (let j = 0; j < 4; j++) {
-                    matrix[i][j] ^= matrixKey[round + 1][i][j];
+                    matrix[i][j] ^= matrixKey[round][i][j];
                 }
             }
-
-            matrix = MixColumns(matrix, invMixingConstants, matrixKey[round + 1], true);
-
+            matrix = MixColumns(matrix, invMixingConstants, matrixKey[round], true);
             for (let i = 0; i < 4; i++) {
                 for (let j = 0; j < 4; j++) {
                     const subbed = SubBytes(matrix[i][j], true);
-                    const shifted = ShiftBits(subbed, matrixKey[round + 1][i][j], (i * 4 + j) % 8, true);
+                    const shifted = ShiftBits(subbed, matrixKey[round][i][j], (i * 4 + j) % 8, true);
                     matrix[i][j] = shifted;
                 }
             }

@@ -37,19 +37,19 @@ export function ShiftColumns(matrix: number[][], inv = false): number[][] {
     if (!inv) {
 
         for (let i = 0; i < matrix.length; i++) {
-            for (let j = 0; j < matrix[i].length-1; j++) {
+            for (let j = 0; j < matrix[i].length - 1; j++) {
                 const temp = matrix[i][j];
-                matrix[i][j] = matrix[i][j+1]
-                matrix[i][j+1] = temp;
+                matrix[i][j] = matrix[i][j + 1]
+                matrix[i][j + 1] = temp;
             }
         }
 
     } else {
         for (let i = 0; i < matrix.length; i++) {
-            for (let j = matrix[i].length-1; j > 0; j--) {
+            for (let j = matrix[i].length - 1; j > 0; j--) {
                 const temp = matrix[i][j];
-                matrix[i][j] = matrix[i][j-1]
-                matrix[i][j-1] = temp;
+                matrix[i][j] = matrix[i][j - 1]
+                matrix[i][j - 1] = temp;
             }
         }
     }
@@ -75,11 +75,15 @@ export function MixColumns(state: number[][], miningConstants: number[][], key: 
     }
     temp = structuredClone(ShiftColumns(temp, inv));
     let tempCopy = temp.map(row => [...row]);
-    for (let i = 0; i < 4; i++) 
-        for (let j = 0; j < 4; j++) 
-            state[i][j] = (tempCopy[i][j] ^ key[i][3 - j]) & 0xFF;   // ✅ XOR + 8-bit masking
-
-    return state;
+    if (!inv)
+        for (let i = 0; i < 4; i++)
+            for (let j = 0; j < 4; j++)
+                state[i][j] = (tempCopy[i][j] ^ key[i][3 - j]) & 0xFF;   // ✅ XOR + 8-bit masking
+    else
+    for (let i = 0; i < 4; i++)
+        for (let j = 0; j < 4; j++)
+            state[i][j] = tempCopy[i][j]
+return state;
 }
 
 export function KeyExpansion(matrixKey: number[][]): number[][] {
@@ -89,24 +93,24 @@ export function KeyExpansion(matrixKey: number[][]): number[][] {
     matrixKey[2][3] = matrixKey[3][3];
     matrixKey[3][3] = temp;
 
-    
+
     matrixKey[0][0] = matrixKey[0][3] ^ matrixKey[0][0];
     matrixKey[1][0] = matrixKey[1][3] ^ matrixKey[1][0];
     matrixKey[2][0] = matrixKey[2][3] ^ matrixKey[2][0];
     matrixKey[3][0] = matrixKey[3][3] ^ matrixKey[3][0];
-    
-    
+
+
     matrixKey[0][1] = matrixKey[0][0] ^ SubBytes(matrixKey[0][0]);
     matrixKey[1][1] = matrixKey[1][0] ^ SubBytes(matrixKey[1][0]);
     matrixKey[2][1] = matrixKey[2][0] ^ SubBytes(matrixKey[2][0]);
     matrixKey[3][1] = matrixKey[3][0] ^ SubBytes(matrixKey[3][0]);
-    
+
     matrixKey[0][2] = matrixKey[0][1] ^ SubBytes(matrixKey[0][1]);
     matrixKey[1][2] = matrixKey[1][1] ^ SubBytes(matrixKey[1][1]);
     matrixKey[2][2] = matrixKey[2][1] ^ SubBytes(matrixKey[2][1]);
     matrixKey[3][2] = matrixKey[3][1] ^ SubBytes(matrixKey[3][1]);
-   
-    
+
+
     matrixKey[0][3] = matrixKey[0][2] ^ (SubBytes(matrixKey[0][0]) ^ matrixKey[0][0]);
     matrixKey[1][3] = matrixKey[1][2] ^ (SubBytes(matrixKey[1][0]) ^ matrixKey[1][0]);
     matrixKey[2][3] = matrixKey[2][2] ^ (SubBytes(matrixKey[2][0]) ^ matrixKey[2][0]);
