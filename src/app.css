@@ -19,3 +19,45 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#msg1 {
+    animation: fadeIn 1s ease-out;
+}
+#msg2 {
+    display: none;
+    animation: fadeIn 1s ease-out;
+}
+#msg3 {
+    display: none;
+    animation: fadeIn 1s ease-out;
+}
+#msg4 {
+    display: none;
+    animation: fadeIn 1s ease-out;
+}
+#msg5 {
+    display: none;
+    animation: fadeIn 1s ease-out;
+}
+#msg6 {
+    display: none;
+    animation: fadeIn 1s ease-out;
+}
+#msg7 {
+    display: none;
+    animation: fadeIn 1s ease-out;
+}
+#msg8 {
+    display: none;
+    animation: fadeIn 1s ease-out;
+}

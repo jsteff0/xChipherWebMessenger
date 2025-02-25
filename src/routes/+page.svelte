@@ -2,7 +2,6 @@
 	import { onMount } from "svelte";
 	import { decript } from "$lib/main";
 	onMount(() => {
-
 		setTimeout(() => {
 			const msgcontainer = document.getElementById("msgcontainer");
 			const msg2 = document.getElementById("msg2");
@@ -71,7 +70,7 @@
 						id="textmsg2"
 						class="text-white text-[16px] font-normal font-['Montserrat'] break-all"
 					>
-					0b0801b9aded4864df220cfa157415089ea02b3499989956d536555cf1d5455a
+						0b0801b9aded4864df220cfa157415089ea02b3499989956d536555cf1d5455a
 					</p>
 				</div>
 			</div>
@@ -139,9 +138,7 @@
 					<p
 						id="textmsg5"
 						class="text-white text-[16px] font-normal font-['Montserrat'] break-words"
-					>
-						
-					</p>
+					></p>
 				</div>
 			</div>
 		</div>
@@ -163,7 +160,21 @@
 					<p
 						class="text-white text-[16px] font-normal font-['Montserrat'] break-words"
 					>
-						Now, copy the key, and change just a few characters in
+						Now, <button class="underline"
+							onclick={() => {
+								navigator.clipboard
+									.writeText("a1f4c5b3d9e0872fb4c1a2d3e5f60789")
+									.then(() => {
+										alert("Key copied to clipboard");
+									})
+									.catch((err) => {
+										console.error(
+											"Error: ",
+											err,
+										);
+									});
+							}}
+						>copy</button> the key, and change just a few characters in
 						it, to see how it affects the message
 					</p>
 				</div>
@@ -209,8 +220,7 @@
 					<p
 						id="textmsg8"
 						class="text-white text-[16px] font-normal font-['Montserrat'] break-all"
-					>
-					</p>
+					></p>
 				</div>
 			</div>
 		</div>
@@ -224,20 +234,18 @@
 			value="a1f4c5b3d9e0872fb4c1a2d3e5f60789"
 			placeholder="Message"
 			onkeydown={async (e) => {
-				if (e.key !== 'Enter') return;
+				if (e.key !== "Enter") return;
 				const button = document.querySelector("button");
-				if(button)
-					button.click();
+				if (button) button.click();
 			}}
 		/>
 
 		<button
 			class="px-[18px] py-2 bg-[#243c4a] rounded-[14px] justify-center items-center gap-2.5 flex overflow-hidden"
 			onkeydown={async (e) => {
-				if (e.key !== 'Enter') return;
+				if (e.key !== "Enter") return;
 				const button = document.querySelector("button");
-				if(button)
-					button.click();
+				if (button) button.click();
 			}}
 			onclick={() => {
 				const msgcontainer = document.getElementById("msgcontainer");
@@ -249,22 +257,33 @@
 				const textmsg7 = document.getElementById("textmsg7");
 				const msg4 = document.getElementById("msg4");
 				const msg7 = document.getElementById("msg7");
-				if (msg && msgcontainer && textmsg4 && msg4 && msg7 && textmsg7 && textmsg2) {
+				if (
+					msg &&
+					msgcontainer &&
+					textmsg4 &&
+					msg4 &&
+					msg7 &&
+					textmsg7 &&
+					textmsg2
+				) {
 					if (msg.value.length !== 32) {
 						alert("The message must be 32 characters long.");
 						return;
 					}
 					if (msg4.style.display != "flex") {
-						const key = msg.value
+						const key = msg.value;
 						msg.value = "";
 						textmsg4.innerText = key;
 						msg4.style.display = "flex";
 						msgcontainer.scrollTop = msgcontainer.scrollHeight;
 						setTimeout(() => {
 							const msg5 = document.getElementById("msg5");
-							const textmsg5 = document.getElementById("textmsg5");
+							const textmsg5 =
+								document.getElementById("textmsg5");
 							if (msg5 && textmsg5) {
-								textmsg5.innerText = "Your message is: "+decript(textmsg2.innerText, key);
+								textmsg5.innerText =
+									"Your message is: " +
+									decript(textmsg2.innerText, key);
 								msg5.style.display = "flex";
 								msgcontainer.scrollTop =
 									msgcontainer.scrollHeight;
@@ -279,16 +298,19 @@
 							}
 						}, 4000);
 					} else {
-						const key = msg.value
+						const key = msg.value;
 						msg.value = "";
 						textmsg7.innerText = key;
 						msg7.style.display = "flex";
 						msgcontainer.scrollTop = msgcontainer.scrollHeight;
 						setTimeout(() => {
 							const msg8 = document.getElementById("msg8");
-							const textmsg8 = document.getElementById("textmsg8");
+							const textmsg8 =
+								document.getElementById("textmsg8");
 							if (msg8 && textmsg8) {
-								textmsg8.innerText = "Your message is: "+decript(textmsg2.innerText, key);
+								textmsg8.innerText =
+									"Your message is: " +
+									decript(textmsg2.innerText, key);
 								msg8.style.display = "flex";
 								msgcontainer.scrollTop =
 									msgcontainer.scrollHeight;
@@ -310,48 +332,3 @@
 	<img src="/info.svg" class="w-4" alt="" />
 	<p>Key: a1f4c5b3d9e0872fb4c1a2d3e5f60789</p>
 </div>
-
-<style>
-	@keyframes fadeIn {
-		from {
-			opacity: 0;
-			transform: translateY(20px);
-		}
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
-
-	#msg1 {
-		animation: fadeIn 1s ease-out;
-	}
-	#msg2 {
-		display: none;
-		animation: fadeIn 1s ease-out;
-	}
-	#msg3 {
-		display: none;
-		animation: fadeIn 1s ease-out;
-	}
-	#msg4 {
-		display: none;
-		animation: fadeIn 1s ease-out;
-	}
-	#msg5 {
-		display: none;
-		animation: fadeIn 1s ease-out;
-	}
-	#msg6 {
-		display: none;
-		animation: fadeIn 1s ease-out;
-	}
-	#msg7 {
-		display: none;
-		animation: fadeIn 1s ease-out;
-	}
-	#msg8 {
-		display: none;
-		animation: fadeIn 1s ease-out;
-	}
-</style>
