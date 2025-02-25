@@ -240,11 +240,11 @@
 			}}
 		/>
 
-		<button
+		<button id="sendthemsg"
 			class="px-[18px] py-2 bg-[#297676] rounded-[14px] justify-center items-center gap-2.5 flex overflow-hidden"
 			onkeydown={async (e) => {
 				if (e.key !== "Enter") return;
-				const button = document.querySelector("button");
+				const button = document.getElementById("sendthemsg");
 				if (button) button.click();
 			}}
 			onclick={() => {
