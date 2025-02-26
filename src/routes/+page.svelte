@@ -174,7 +174,7 @@
 										);
 									});
 							}}
-						>copy</button> the key, and change just a few characters in
+						>copy</button> and paste the key, and change just a few characters in
 						it, to see how it affects the message
 					</p>
 				</div>
