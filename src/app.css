@@ -3,7 +3,7 @@
 @import 'tailwindcss/utilities';
 
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -29,35 +29,6 @@
         transform: translateY(0);
     }
 }
-
-#msg1 {
-    animation: fadeIn 1s ease-out;
-}
-#msg2 {
-    display: none;
-    animation: fadeIn 1s ease-out;
-}
-#msg3 {
-    display: none;
-    animation: fadeIn 1s ease-out;
-}
-#msg4 {
-    display: none;
-    animation: fadeIn 1s ease-out;
-}
-#msg5 {
-    display: none;
-    animation: fadeIn 1s ease-out;
-}
-#msg6 {
-    display: none;
-    animation: fadeIn 1s ease-out;
-}
-#msg7 {
-    display: none;
-    animation: fadeIn 1s ease-out;
-}
-#msg8 {
-    display: none;
-    animation: fadeIn 1s ease-out;
+.msg {
+	animation: fadeIn 1s ease-out;
 }

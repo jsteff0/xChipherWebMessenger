@@ -1,6 +1,6 @@
 import { ShiftBits, SubBytes, MixColumns, KeyExpansion, SwapBytes } from './cipherUtils';
 
-export function encript(text: string, key: string) {
+export function encrypt(text: string, key: string) {
     if (key.length !== 32) {
         console.log('Key must be 32 characters');
         return;
@@ -77,7 +77,7 @@ export function encript(text: string, key: string) {
     //console.log('Your ciphertext is ' + ciphertext);
     return ciphertext
 }
-export function decript(ciphertext: string, key: string) {
+export function decrypt(ciphertext: string, key: string) {
 
     let plaintext = '';
     let matrixKey = Array.from({ length: 1 }, () => Array.from({ length: 4 }, () => Array(4).fill(0x00)));

@@ -12,13 +12,13 @@
 					class="h-[17px] pl-2.5 justify-start items-center gap-[15px] inline-flex"
 				>
 					<p
-						class="text-[#243c4a] text-[15px] font-normal font-['Montserrat']"
+						class="text-[#297676] text-[15px] font-normal font-['Montserrat']"
 					>
 						Alice
 					</p>
 				</div>
 				<div
-					class="px-5 py-2.5 bg-[#243c4a] overflow-hidden h-auto rounded-[15px]"
+					class="px-5 py-2.5 bg-[#297676] overflow-hidden h-auto rounded-[15px]"
 				>
 					<p
 						class="text-white text-[16px] font-normal font-['Montserrat'] break-words"
@@ -40,7 +40,7 @@
 
 		<button
 
-			class="px-[18px] py-2 bg-[#243c4a] rounded-[14px] justify-center items-center gap-2.5 flex overflow-hidden"
+			class="px-[18px] py-2 bg-[#297676] rounded-[14px] justify-center items-center gap-2.5 flex overflow-hidden"
 		>
 			<p
 				class="text-[#f2f2f2] text-[13px] font-semibold font-['Montserrat']"
