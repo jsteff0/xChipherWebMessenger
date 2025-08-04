@@ -19,11 +19,13 @@
 	];
 
 	onMount(() => {
-		preload.forEach((msg, index) => {
+		messages = [preload[0]]; // Start with the first message
+		scrollToBottom();
+		preload.slice(1).forEach((msg, index) => {
 			setTimeout(() => {
 				messages = [...messages, msg];
 				scrollToBottom();
-			}, 1100 + (index > 2 ? index * 500 : index * 700));
+			}, 1000 + (index > 2 ? index * 500 : index * 700));
 		});
 	});
 
