@@ -8,12 +8,14 @@
 		const preload: Msg[] = [
 		{ id: 1, author: "Alice", text: "Welcome to XCipher website" },
 		{ id: 2, author: "Bob", text: "Here are some links for this project:" },
-		{ id: 3, author: "Alice", text: `<a target="_blank" class="underline hover:line" href="https://github.com/jsteff0/xCipher">GitHub of xCipher</a>` },
-		{ id: 4, author: "Bob", text: `<a target="_blank" class="underline" href="https://github.com/jsteff0/xChipherWebMessenger">GitHub of xCipher Website</a>` },
-		{ id: 5, author: "Alice", text: `<a target="_blank" class="underline" href="https://t.me/jsteff0">Creator</a>` },
-		{ id: 6, author: "Bob", text: `<a target="_blank" class="underline" href="/playground/">xCipher Playground</a>` },
-		{ id: 7, author: "Alice", text: `<a target="_blank" class="underline" href="/euromath2025/">Euromath page</a>` },
-		{ id: 8, author: "Bob", text: `<a target="_blank" class="underline" href="https://drive.google.com/drive/folders/1m_wAx5dk_zKpkRS35Hf41MQ-IAfQoxmx?usp=sharing">Euromath presentation and text script</a>` },
+		{ id: 3, author: "Alice", text: `<a target="_blank" class="underline" href="https://t.me/XCipherLab">XCipherLab Telegram</a>` },
+		{ id: 4, author: "Bob", text: `<a target="_blank" class="underline" href="https://www.instagram.com/xcipherlab/">XCipherLab Instagram</a>` },
+		{ id: 5, author: "Alice", text: `<a target="_blank" class="underline" href="https://www.patreon.com/c/XCipherLab">XCipherLab Patreon</a>` },
+		{ id: 6, author: "Bob", text: `<a target="_blank" class="underline hover:line" href="https://github.com/jsteff0/xCipher">GitHub of xCipher</a>` },
+		{ id: 7, author: "Alice", text: `<a target="_blank" class="underline" href="https://github.com/jsteff0/xChipherWebMessenger">xCipher API</a>` },
+		{ id: 8, author: "Bob", text: `<a target="_blank" class="underline" href="/playground/">xCipher Playground</a>` },
+		{ id: 9, author: "Alice", text: `<a target="_blank" class="underline" href="/euromath2025/">Euromath page</a>` },
+		{ id: 10, author: "Bob", text: `<a target="_blank" class="underline" href="https://drive.google.com/drive/folders/1m_wAx5dk_zKpkRS35Hf41MQ-IAfQoxmx?usp=sharing">Euromath presentation and text script</a>` },
 	];
 
 	onMount(() => {
@@ -21,7 +23,7 @@
 			setTimeout(() => {
 				messages = [...messages, msg];
 				scrollToBottom();
-			}, 1500 + (index > 2 ? index * 500 : index * 700));
+			}, 1100 + (index > 2 ? index * 500 : index * 700));
 		});
 	});
 
