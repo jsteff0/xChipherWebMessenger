@@ -1,0 +1,2107 @@
+{
+  "chapter1": [
+    {
+      "id": "1.1-001",
+      "category": "Chapter 1",
+      "subchapter": "1.1 Number Systems",
+      "question": "Why do computers use binary to represent all forms of data?",
+      "answer": "Because computer hardware uses electronic switches that have only two states: ON and OFF. These are represented as 1 and 0, so all data must be converted to binary before it can be processed."
+    },
+    {
+      "id": "1.1-002",
+      "category": "Chapter 1",
+      "subchapter": "1.1 Number Systems",
+      "question": "What is denary?",
+      "answer": "Denary is a base 10 number system that uses the digits 0 to 9."
+    },
+    {
+      "id": "1.1-003",
+      "category": "Chapter 1",
+      "subchapter": "1.1 Number Systems",
+      "question": "What is binary?",
+      "answer": "Binary is a base 2 number system that uses only the digits 0 and 1."
+    },
+    {
+      "id": "1.1-004",
+      "category": "Chapter 1",
+      "subchapter": "1.1 Number Systems",
+      "question": "What is hexadecimal?",
+      "answer": "Hexadecimal is a base 16 number system that uses the digits 0 to 9 and the letters A to F."
+    },
+    {
+      "id": "1.1-005",
+      "category": "Chapter 1",
+      "subchapter": "1.1 Number Systems",
+      "question": "What values do A, B, C, D, E and F represent in hexadecimal?",
+      "answer": "A = 10, B = 11, C = 12, D = 13, E = 14, F = 15."
+    },
+    {
+      "id": "1.1-006",
+      "category": "Chapter 1",
+      "subchapter": "1.1 Number Systems",
+      "question": "What are the 8-bit binary place values?",
+      "answer": "128, 64, 32, 16, 8, 4, 2, 1."
+    },
+    {
+      "id": "1.1-007",
+      "category": "Chapter 1",
+      "subchapter": "1.1 Number Systems",
+      "question": "How do you convert binary to denary?",
+      "answer": "Add together the place values of the columns where there is a 1."
+    },
+    {
+      "id": "1.1-008",
+      "category": "Chapter 1",
+      "subchapter": "1.1 Number Systems",
+      "question": "How do you convert denary to binary?",
+      "answer": "Use either repeated subtraction of powers of 2 or repeated division by 2 and read the remainders upwards."
+    },
+    {
+      "id": "1.1-009",
+      "category": "Chapter 1",
+      "subchapter": "1.1 Number Systems",
+      "question": "How do you convert binary to hexadecimal?",
+      "answer": "Split the binary number into groups of 4 bits from the right, then convert each group into one hexadecimal digit."
+    },
+    {
+      "id": "1.1-010",
+      "category": "Chapter 1",
+      "subchapter": "1.1 Number Systems",
+      "question": "How do you convert hexadecimal to binary?",
+      "answer": "Replace each hexadecimal digit with its 4-bit binary equivalent."
+    },
+    {
+      "id": "1.1-011",
+      "category": "Chapter 1",
+      "subchapter": "1.1 Number Systems",
+      "question": "Why is hexadecimal useful?",
+      "answer": "Hexadecimal is shorter and easier for humans to read, write and understand than binary. One hexadecimal digit represents 4 binary bits."
+    },
+    {
+      "id": "1.1-012",
+      "category": "Chapter 1",
+      "subchapter": "1.1 Number Systems",
+      "question": "What are some areas in computer science where hexadecimal is used?",
+      "answer": "It is used in areas such as memory dumps, error codes, MAC addresses, IPv6 addresses and colour codes."
+    },
+    {
+      "id": "1.1-013",
+      "category": "Chapter 1",
+      "subchapter": "1.1 Number Systems",
+      "question": "How do you add two positive 8-bit binary integers?",
+      "answer": "Add the bits column by column from right to left, carrying 1 when the total in a column is greater than 1."
+    },
+    {
+      "id": "1.1-014",
+      "category": "Chapter 1",
+      "subchapter": "1.1 Number Systems",
+      "question": "What is overflow in binary addition?",
+      "answer": "Overflow happens when the result is too large to fit into the available number of bits."
+    },
+    {
+      "id": "1.1-015",
+      "category": "Chapter 1",
+      "subchapter": "1.1 Number Systems",
+      "question": "Why does overflow occur in 8-bit binary addition?",
+      "answer": "Because an 8-bit register can only store values from 0 to 255. If the result is greater than 255, a 9th bit is produced and overflow occurs."
+    },
+    {
+      "id": "1.1-016",
+      "category": "Chapter 1",
+      "subchapter": "1.1 Number Systems",
+      "question": "What is the maximum value that can be stored in an 8-bit register?",
+      "answer": "255."
+    },
+    {
+      "id": "1.1-017",
+      "category": "Chapter 1",
+      "subchapter": "1.1 Number Systems",
+      "question": "What is a logical left shift?",
+      "answer": "A logical left shift moves all bits to the left, loses bits shifted out on the left and fills empty spaces on the right with 0."
+    },
+    {
+      "id": "1.1-018",
+      "category": "Chapter 1",
+      "subchapter": "1.1 Number Systems",
+      "question": "What is the effect of a logical left shift on a positive binary integer?",
+      "answer": "Each left shift multiplies the value by 2."
+    },
+    {
+      "id": "1.1-019",
+      "category": "Chapter 1",
+      "subchapter": "1.1 Number Systems",
+      "question": "What is a logical right shift?",
+      "answer": "A logical right shift moves all bits to the right, loses bits shifted out on the right and fills empty spaces on the left with 0."
+    },
+    {
+      "id": "1.1-020",
+      "category": "Chapter 1",
+      "subchapter": "1.1 Number Systems",
+      "question": "What is the effect of a logical right shift on a positive binary integer?",
+      "answer": "Each right shift divides the value by 2."
+    },
+    {
+      "id": "1.1-021",
+      "category": "Chapter 1",
+      "subchapter": "1.1 Number Systems",
+      "question": "What happens to bits shifted out of the register during a logical shift?",
+      "answer": "They are lost."
+    },
+    {
+      "id": "1.1-022",
+      "category": "Chapter 1",
+      "subchapter": "1.1 Number Systems",
+      "question": "What is two’s complement used for?",
+      "answer": "Two’s complement is used to represent positive and negative integers in binary."
+    },
+    {
+      "id": "1.1-023",
+      "category": "Chapter 1",
+      "subchapter": "1.1 Number Systems",
+      "question": "What is the 8-bit two’s complement range?",
+      "answer": "From -128 to +127."
+    },
+    {
+      "id": "1.1-024",
+      "category": "Chapter 1",
+      "subchapter": "1.1 Number Systems",
+      "question": "How do you convert a positive denary number to an 8-bit two’s complement number?",
+      "answer": "Write it as normal binary and make sure it fits in 8 bits with a leading 0 if needed."
+    },
+    {
+      "id": "1.1-025",
+      "category": "Chapter 1",
+      "subchapter": "1.1 Number Systems",
+      "question": "How do you convert a negative denary number to an 8-bit two’s complement number?",
+      "answer": "Write the positive binary version in 8 bits, invert all the bits, then add 1."
+    },
+    {
+      "id": "1.2-001",
+      "category": "Chapter 1",
+      "subchapter": "1.2 Text, Sound and Images",
+      "question": "How and why does a computer represent text?",
+      "answer": "Text is converted into binary so it can be processed by a computer."
+    },
+    {
+      "id": "1.2-002",
+      "category": "Chapter 1",
+      "subchapter": "1.2 Text, Sound and Images",
+      "question": "What is ASCII?",
+      "answer": "ASCII stands for American Standard Code for Information Interchange. It is a character set used to represent text in binary."
+    },
+    {
+      "id": "1.2-003",
+      "category": "Chapter 1",
+      "subchapter": "1.2 Text, Sound and Images",
+      "question": "What is Unicode?",
+      "answer": "Unicode is a character set that can represent a much greater range of characters and symbols than ASCII, including many languages and emojis."
+    },
+    {
+      "id": "1.2-004",
+      "category": "Chapter 1",
+      "subchapter": "1.2 Text, Sound and Images",
+      "question": "Why is Unicode better than ASCII?",
+      "answer": "Unicode supports many more characters, symbols, languages and emojis than ASCII."
+    },
+    {
+      "id": "1.2-005",
+      "category": "Chapter 1",
+      "subchapter": "1.2 Text, Sound and Images",
+      "question": "Why does Unicode require more bits per character than ASCII?",
+      "answer": "Because it has to represent a much larger range of characters and symbols."
+    },
+    {
+      "id": "1.2-006",
+      "category": "Chapter 1",
+      "subchapter": "1.2 Text, Sound and Images",
+      "question": "How and why does a computer represent sound?",
+      "answer": "A sound wave is sampled and converted into binary so it can be processed and stored by a computer."
+    },
+    {
+      "id": "1.2-007",
+      "category": "Chapter 1",
+      "subchapter": "1.2 Text, Sound and Images",
+      "question": "What is sample rate?",
+      "answer": "Sample rate is the number of sound samples taken in one second."
+    },
+    {
+      "id": "1.2-008",
+      "category": "Chapter 1",
+      "subchapter": "1.2 Text, Sound and Images",
+      "question": "What is sample resolution?",
+      "answer": "Sample resolution is the number of bits used for each sample."
+    },
+    {
+      "id": "1.2-009",
+      "category": "Chapter 1",
+      "subchapter": "1.2 Text, Sound and Images",
+      "question": "What happens when sample rate increases?",
+      "answer": "The sound recording becomes more accurate and the file size increases."
+    },
+    {
+      "id": "1.2-010",
+      "category": "Chapter 1",
+      "subchapter": "1.2 Text, Sound and Images",
+      "question": "What happens when sample resolution increases?",
+      "answer": "The sound recording becomes more accurate and the file size increases."
+    },
+    {
+      "id": "1.2-011",
+      "category": "Chapter 1",
+      "subchapter": "1.2 Text, Sound and Images",
+      "question": "How and why does a computer represent an image?",
+      "answer": "An image is made of pixels which are converted into binary so the computer can process and store it."
+    },
+    {
+      "id": "1.2-012",
+      "category": "Chapter 1",
+      "subchapter": "1.2 Text, Sound and Images",
+      "question": "What is image resolution?",
+      "answer": "Resolution is the number of pixels in the image."
+    },
+    {
+      "id": "1.2-013",
+      "category": "Chapter 1",
+      "subchapter": "1.2 Text, Sound and Images",
+      "question": "What is colour depth?",
+      "answer": "Colour depth is the number of bits used to represent each colour."
+    },
+    {
+      "id": "1.2-014",
+      "category": "Chapter 1",
+      "subchapter": "1.2 Text, Sound and Images",
+      "question": "What happens when image resolution increases?",
+      "answer": "Image quality increases and file size increases."
+    },
+    {
+      "id": "1.2-015",
+      "category": "Chapter 1",
+      "subchapter": "1.2 Text, Sound and Images",
+      "question": "What happens when colour depth increases?",
+      "answer": "Image quality increases and file size increases."
+    },
+    {
+      "id": "1.3-001",
+      "category": "Chapter 1",
+      "subchapter": "1.3 Data Storage and Compression",
+      "question": "How is data storage measured?",
+      "answer": "Using units such as bit, nibble, byte, kibibyte (KiB), mebibyte (MiB), gibibyte (GiB), tebibyte (TiB), pebibyte (PiB) and exbibyte (EiB)."
+    },
+    {
+      "id": "1.3-002",
+      "category": "Chapter 1",
+      "subchapter": "1.3 Data Storage and Compression",
+      "question": "How many bits are in a nibble?",
+      "answer": "4 bits."
+    },
+    {
+      "id": "1.3-003",
+      "category": "Chapter 1",
+      "subchapter": "1.3 Data Storage and Compression",
+      "question": "How many bits are in a byte?",
+      "answer": "8 bits."
+    },
+    {
+      "id": "1.3-004",
+      "category": "Chapter 1",
+      "subchapter": "1.3 Data Storage and Compression",
+      "question": "How many bytes are in a KiB?",
+      "answer": "1024 bytes."
+    },
+    {
+      "id": "1.3-005",
+      "category": "Chapter 1",
+      "subchapter": "1.3 Data Storage and Compression",
+      "question": "How many KiB are in a MiB?",
+      "answer": "1024 KiB."
+    },
+    {
+      "id": "1.3-006",
+      "category": "Chapter 1",
+      "subchapter": "1.3 Data Storage and Compression",
+      "question": "How many MiB are in a GiB?",
+      "answer": "1024 MiB."
+    },
+    {
+      "id": "1.3-007",
+      "category": "Chapter 1",
+      "subchapter": "1.3 Data Storage and Compression",
+      "question": "What value must be used in storage calculations: 1000 or 1024?",
+      "answer": "1024."
+    },
+    {
+      "id": "1.3-008",
+      "category": "Chapter 1",
+      "subchapter": "1.3 Data Storage and Compression",
+      "question": "What information might be given to calculate image file size?",
+      "answer": "Image resolution and colour depth."
+    },
+    {
+      "id": "1.3-009",
+      "category": "Chapter 1",
+      "subchapter": "1.3 Data Storage and Compression",
+      "question": "What information might be given to calculate sound file size?",
+      "answer": "Sample rate, sample resolution and length of track."
+    },
+    {
+      "id": "1.3-010",
+      "category": "Chapter 1",
+      "subchapter": "1.3 Data Storage and Compression",
+      "question": "What is the purpose of data compression?",
+      "answer": "To reduce the size of a file."
+    },
+    {
+      "id": "1.3-011",
+      "category": "Chapter 1",
+      "subchapter": "1.3 Data Storage and Compression",
+      "question": "Why is data compression needed?",
+      "answer": "It reduces bandwidth required, reduces storage space required and shortens transmission time."
+    },
+    {
+      "id": "1.3-012",
+      "category": "Chapter 1",
+      "subchapter": "1.3 Data Storage and Compression",
+      "question": "What is lossless compression?",
+      "answer": "Lossless compression reduces file size without permanently losing any data."
+    },
+    {
+      "id": "1.3-013",
+      "category": "Chapter 1",
+      "subchapter": "1.3 Data Storage and Compression",
+      "question": "Give an example of lossless compression.",
+      "answer": "Run length encoding (RLE)."
+    },
+    {
+      "id": "1.3-014",
+      "category": "Chapter 1",
+      "subchapter": "1.3 Data Storage and Compression",
+      "question": "What is lossy compression?",
+      "answer": "Lossy compression reduces file size by permanently removing some data."
+    },
+    {
+      "id": "1.3-015",
+      "category": "Chapter 1",
+      "subchapter": "1.3 Data Storage and Compression",
+      "question": "Give examples of lossy compression methods.",
+      "answer": "Reducing image resolution, reducing colour depth, reducing sound sample rate or reducing sound sample resolution."
+    }
+  ],
+  "chapter2": [
+    {
+      "id": "2.1-001",
+      "category": "Chapter 2",
+      "subchapter": "2.1 Types and Methods of Data Transmission",
+      "question": "Why is data broken down into packets for transmission?",
+      "answer": "Because data is transmitted in smaller units called packets, which are easier to manage and can be sent across a network efficiently."
+    },
+    {
+      "id": "2.1-002",
+      "category": "Chapter 2",
+      "subchapter": "2.1 Types and Methods of Data Transmission",
+      "question": "What are the three main parts of a packet?",
+      "answer": "A packet contains a header, a payload and a trailer."
+    },
+    {
+      "id": "2.1-003",
+      "category": "Chapter 2",
+      "subchapter": "2.1 Types and Methods of Data Transmission",
+      "question": "What information is stored in a packet header?",
+      "answer": "The packet header includes the destination address, the packet number and the originator’s address."
+    },
+    {
+      "id": "2.1-004",
+      "category": "Chapter 2",
+      "subchapter": "2.1 Types and Methods of Data Transmission",
+      "question": "What is packet switching?",
+      "answer": "Packet switching is the process where data is broken into packets and each packet may take a different route across the network."
+    },
+    {
+      "id": "2.1-005",
+      "category": "Chapter 2",
+      "subchapter": "2.1 Types and Methods of Data Transmission",
+      "question": "Who controls the route a packet takes?",
+      "answer": "A router controls the route a packet takes."
+    },
+    {
+      "id": "2.1-006",
+      "category": "Chapter 2",
+      "subchapter": "2.1 Types and Methods of Data Transmission",
+      "question": "Can packets arrive out of order?",
+      "answer": "Yes. Packets may arrive out of order."
+    },
+    {
+      "id": "2.1-007",
+      "category": "Chapter 2",
+      "subchapter": "2.1 Types and Methods of Data Transmission",
+      "question": "What happens once the last packet has arrived?",
+      "answer": "Once the last packet has arrived, the packets are reordered into the correct sequence."
+    },
+    {
+      "id": "2.1-008",
+      "category": "Chapter 2",
+      "subchapter": "2.1 Types and Methods of Data Transmission",
+      "question": "What is serial data transmission?",
+      "answer": "Serial transmission sends data one bit at a time along a single channel."
+    },
+    {
+      "id": "2.1-009",
+      "category": "Chapter 2",
+      "subchapter": "2.1 Types and Methods of Data Transmission",
+      "question": "What is parallel data transmission?",
+      "answer": "Parallel transmission sends multiple bits at the same time using separate channels."
+    },
+    {
+      "id": "2.1-010",
+      "category": "Chapter 2",
+      "subchapter": "2.1 Types and Methods of Data Transmission",
+      "question": "What is simplex transmission?",
+      "answer": "Simplex transmission means data can only travel in one direction."
+    },
+    {
+      "id": "2.1-011",
+      "category": "Chapter 2",
+      "subchapter": "2.1 Types and Methods of Data Transmission",
+      "question": "What is half-duplex transmission?",
+      "answer": "Half-duplex transmission means data can travel in both directions, but not at the same time."
+    },
+    {
+      "id": "2.1-012",
+      "category": "Chapter 2",
+      "subchapter": "2.1 Types and Methods of Data Transmission",
+      "question": "What is full-duplex transmission?",
+      "answer": "Full-duplex transmission means data can travel in both directions at the same time."
+    },
+    {
+      "id": "2.1-013",
+      "category": "Chapter 2",
+      "subchapter": "2.1 Types and Methods of Data Transmission",
+      "question": "Which transmission methods must you know from the syllabus?",
+      "answer": "Serial, parallel, simplex, half-duplex and full-duplex."
+    },
+    {
+      "id": "2.1-014",
+      "category": "Chapter 2",
+      "subchapter": "2.1 Types and Methods of Data Transmission",
+      "question": "What must you know about each transmission method in the exam?",
+      "answer": "You must know how each method works and be able to explain the advantages, disadvantages and suitability of each method for a given scenario."
+    },
+    {
+      "id": "2.1-015",
+      "category": "Chapter 2",
+      "subchapter": "2.1 Types and Methods of Data Transmission",
+      "question": "What does USB stand for?",
+      "answer": "Universal Serial Bus."
+    },
+    {
+      "id": "2.1-016",
+      "category": "Chapter 2",
+      "subchapter": "2.1 Types and Methods of Data Transmission",
+      "question": "What must you know about the USB interface?",
+      "answer": "You must understand the USB interface, explain how it is used to transmit data, and know its benefits and drawbacks."
+    },
+    {
+      "id": "2.2-001",
+      "category": "Chapter 2",
+      "subchapter": "2.2 Methods of Error Detection",
+      "question": "Why is it necessary to check for errors after data transmission?",
+      "answer": "Because errors can happen during transmission, so checks are needed to detect whether the data has changed."
+    },
+    {
+      "id": "2.2-002",
+      "category": "Chapter 2",
+      "subchapter": "2.2 Methods of Error Detection",
+      "question": "How can errors occur during data transmission?",
+      "answer": "Errors can occur due to interference, causing data loss, data gain or data change."
+    },
+    {
+      "id": "2.2-003",
+      "category": "Chapter 2",
+      "subchapter": "2.2 Methods of Error Detection",
+      "question": "What is a parity check?",
+      "answer": "A parity check is an error detection method that uses a parity bit to make the number of 1s either odd or even."
+    },
+    {
+      "id": "2.2-004",
+      "category": "Chapter 2",
+      "subchapter": "2.2 Methods of Error Detection",
+      "question": "What is even parity?",
+      "answer": "Even parity means the total number of 1 bits, including the parity bit, must be even."
+    },
+    {
+      "id": "2.2-005",
+      "category": "Chapter 2",
+      "subchapter": "2.2 Methods of Error Detection",
+      "question": "What is odd parity?",
+      "answer": "Odd parity means the total number of 1 bits, including the parity bit, must be odd."
+    },
+    {
+      "id": "2.2-006",
+      "category": "Chapter 2",
+      "subchapter": "2.2 Methods of Error Detection",
+      "question": "Which parity-based methods are included in the syllabus notes?",
+      "answer": "Parity byte and parity block check."
+    },
+    {
+      "id": "2.2-007",
+      "category": "Chapter 2",
+      "subchapter": "2.2 Methods of Error Detection",
+      "question": "What is a checksum?",
+      "answer": "A checksum is a value calculated from transmitted data and sent with it so the receiver can recalculate it and compare the two values."
+    },
+    {
+      "id": "2.2-008",
+      "category": "Chapter 2",
+      "subchapter": "2.2 Methods of Error Detection",
+      "question": "What is an echo check?",
+      "answer": "An echo check is an error detection method where the received data is sent back to the sender and compared with the original data."
+    },
+    {
+      "id": "2.2-009",
+      "category": "Chapter 2",
+      "subchapter": "2.2 Methods of Error Detection",
+      "question": "What is a check digit?",
+      "answer": "A check digit is a digit added to the end of data so that errors in data entry can be detected."
+    },
+    {
+      "id": "2.2-010",
+      "category": "Chapter 2",
+      "subchapter": "2.2 Methods of Error Detection",
+      "question": "What is a check digit used for?",
+      "answer": "It is used to detect errors in data entry."
+    },
+    {
+      "id": "2.2-011",
+      "category": "Chapter 2",
+      "subchapter": "2.2 Methods of Error Detection",
+      "question": "Give examples of where a check digit is used.",
+      "answer": "Check digits are used in ISBN numbers and bar codes."
+    },
+    {
+      "id": "2.2-012",
+      "category": "Chapter 2",
+      "subchapter": "2.2 Methods of Error Detection",
+      "question": "What does ARQ stand for?",
+      "answer": "Automatic Repeat Query."
+    },
+    {
+      "id": "2.2-013",
+      "category": "Chapter 2",
+      "subchapter": "2.2 Methods of Error Detection",
+      "question": "What is ARQ used for?",
+      "answer": "ARQ is used to establish that data is received without error."
+    },
+    {
+      "id": "2.2-014",
+      "category": "Chapter 2",
+      "subchapter": "2.2 Methods of Error Detection",
+      "question": "What acknowledgements are used in ARQ?",
+      "answer": "Positive acknowledgements and negative acknowledgements."
+    },
+    {
+      "id": "2.2-015",
+      "category": "Chapter 2",
+      "subchapter": "2.2 Methods of Error Detection",
+      "question": "What is timeout in ARQ?",
+      "answer": "Timeout is the time limit for receiving an acknowledgement; if no acknowledgement is received in time, the data is resent."
+    },
+    {
+      "id": "2.3-001",
+      "category": "Chapter 2",
+      "subchapter": "2.3 Encryption",
+      "question": "Why is encryption needed when transmitting data?",
+      "answer": "Encryption is needed to protect transmitted data from being read if it is intercepted."
+    },
+    {
+      "id": "2.3-002",
+      "category": "Chapter 2",
+      "subchapter": "2.3 Encryption",
+      "question": "What is the purpose of encryption?",
+      "answer": "The purpose of encryption is to convert readable data into an unreadable form so only authorised users can access it."
+    },
+    {
+      "id": "2.3-003",
+      "category": "Chapter 2",
+      "subchapter": "2.3 Encryption",
+      "question": "What is symmetric encryption?",
+      "answer": "Symmetric encryption is encryption where the same key is used to encrypt and decrypt the data."
+    },
+    {
+      "id": "2.3-004",
+      "category": "Chapter 2",
+      "subchapter": "2.3 Encryption",
+      "question": "What is asymmetric encryption?",
+      "answer": "Asymmetric encryption is encryption that uses two different keys."
+    },
+    {
+      "id": "2.3-005",
+      "category": "Chapter 2",
+      "subchapter": "2.3 Encryption",
+      "question": "Which keys are used in asymmetric encryption?",
+      "answer": "A public key and a private key."
+    },
+    {
+      "id": "2.3-006",
+      "category": "Chapter 2",
+      "subchapter": "2.3 Encryption",
+      "question": "What is a public key?",
+      "answer": "A public key is a key that can be shared openly and is used in asymmetric encryption."
+    },
+    {
+      "id": "2.3-007",
+      "category": "Chapter 2",
+      "subchapter": "2.3 Encryption",
+      "question": "What is a private key?",
+      "answer": "A private key is a secret key known only to its owner and is used in asymmetric encryption."
+    }
+  ],
+  "chapter3": [
+    {
+      "id": "3.1-001",
+      "category": "Chapter 3",
+      "subchapter": "3.1 Computer Architecture",
+      "question": "What is a CPU?",
+      "answer": "The CPU is the central processing unit. It processes instructions and data so the computer can produce output."
+    },
+    {
+      "id": "3.1-002",
+      "category": "Chapter 3",
+      "subchapter": "3.1 Computer Architecture",
+      "question": "What is a microprocessor?",
+      "answer": "A microprocessor is a type of integrated circuit on a single chip that contains the CPU."
+    },
+    {
+      "id": "3.1-003",
+      "category": "Chapter 3",
+      "subchapter": "3.1 Computer Architecture",
+      "question": "What is Von Neumann architecture?",
+      "answer": "Von Neumann architecture is based on the stored-program concept, where both instructions and data are stored in memory."
+    },
+    {
+      "id": "3.1-004",
+      "category": "Chapter 3",
+      "subchapter": "3.1 Computer Architecture",
+      "question": "What does the ALU do?",
+      "answer": "The ALU, or Arithmetic Logic Unit, carries out arithmetic operations and logical operations."
+    },
+    {
+      "id": "3.1-005",
+      "category": "Chapter 3",
+      "subchapter": "3.1 Computer Architecture",
+      "question": "What does the Control Unit do?",
+      "answer": "The Control Unit controls the operation of the CPU and sends control signals to other parts of the computer."
+    },
+    {
+      "id": "3.1-006",
+      "category": "Chapter 3",
+      "subchapter": "3.1 Computer Architecture",
+      "question": "What are registers?",
+      "answer": "Registers are small, high-speed storage locations inside the CPU."
+    },
+    {
+      "id": "3.1-007",
+      "category": "Chapter 3",
+      "subchapter": "3.1 Computer Architecture",
+      "question": "What does the Program Counter (PC) store?",
+      "answer": "The Program Counter stores the address of the next instruction to be executed."
+    },
+    {
+      "id": "3.1-008",
+      "category": "Chapter 3",
+      "subchapter": "3.1 Computer Architecture",
+      "question": "What does the Memory Address Register (MAR) store?",
+      "answer": "The Memory Address Register stores the address of the memory location being accessed."
+    },
+    {
+      "id": "3.1-009",
+      "category": "Chapter 3",
+      "subchapter": "3.1 Computer Architecture",
+      "question": "What does the Memory Data Register (MDR) store?",
+      "answer": "The Memory Data Register stores data being read from memory or written to memory."
+    },
+    {
+      "id": "3.1-010",
+      "category": "Chapter 3",
+      "subchapter": "3.1 Computer Architecture",
+      "question": "What does the Current Instruction Register (CIR) store?",
+      "answer": "The Current Instruction Register stores the current instruction being decoded and executed."
+    },
+    {
+      "id": "3.1-011",
+      "category": "Chapter 3",
+      "subchapter": "3.1 Computer Architecture",
+      "question": "What does the Accumulator (ACC) store?",
+      "answer": "The Accumulator stores temporary results from ALU calculations."
+    },
+    {
+      "id": "3.1-012",
+      "category": "Chapter 3",
+      "subchapter": "3.1 Computer Architecture",
+      "question": "What does the address bus carry?",
+      "answer": "The address bus carries memory addresses."
+    },
+    {
+      "id": "3.1-013",
+      "category": "Chapter 3",
+      "subchapter": "3.1 Computer Architecture",
+      "question": "What does the data bus carry?",
+      "answer": "The data bus carries data and instructions."
+    },
+    {
+      "id": "3.1-014",
+      "category": "Chapter 3",
+      "subchapter": "3.1 Computer Architecture",
+      "question": "What does the control bus carry?",
+      "answer": "The control bus carries control signals."
+    },
+    {
+      "id": "3.1-015",
+      "category": "Chapter 3",
+      "subchapter": "3.1 Computer Architecture",
+      "question": "What happens in the fetch stage of the FDE cycle?",
+      "answer": "The CPU fetches the next instruction from memory using the address stored in the Program Counter."
+    },
+    {
+      "id": "3.1-016",
+      "category": "Chapter 3",
+      "subchapter": "3.1 Computer Architecture",
+      "question": "What happens in the decode stage of the FDE cycle?",
+      "answer": "The instruction is decoded so the CPU understands what operation must be carried out."
+    },
+    {
+      "id": "3.1-017",
+      "category": "Chapter 3",
+      "subchapter": "3.1 Computer Architecture",
+      "question": "What happens in the execute stage of the FDE cycle?",
+      "answer": "The decoded instruction is carried out."
+    },
+    {
+      "id": "3.1-018",
+      "category": "Chapter 3",
+      "subchapter": "3.1 Computer Architecture",
+      "question": "How can clock speed affect CPU performance?",
+      "answer": "A higher clock speed means more cycles per second, so the CPU may process instructions faster."
+    },
+    {
+      "id": "3.1-019",
+      "category": "Chapter 3",
+      "subchapter": "3.1 Computer Architecture",
+      "question": "How can cache size affect CPU performance?",
+      "answer": "A larger cache can improve performance because frequently used data can be accessed more quickly."
+    },
+    {
+      "id": "3.1-020",
+      "category": "Chapter 3",
+      "subchapter": "3.1 Computer Architecture",
+      "question": "How can the number of cores affect CPU performance?",
+      "answer": "More cores can improve performance for multitasking and parallel processing."
+    },
+    {
+      "id": "3.1-021",
+      "category": "Chapter 3",
+      "subchapter": "3.1 Computer Architecture",
+      "question": "What is overclocking?",
+      "answer": "Overclocking is increasing the clock speed beyond the design limit."
+    },
+    {
+      "id": "3.1-022",
+      "category": "Chapter 3",
+      "subchapter": "3.1 Computer Architecture",
+      "question": "What problems can overclocking cause?",
+      "answer": "Overclocking can cause overheating, instability and system crashes."
+    },
+    {
+      "id": "3.1-023",
+      "category": "Chapter 3",
+      "subchapter": "3.1 Computer Architecture",
+      "question": "What is an instruction set?",
+      "answer": "An instruction set is the complete set of machine code instructions that a CPU can process."
+    },
+    {
+      "id": "3.1-024",
+      "category": "Chapter 3",
+      "subchapter": "3.1 Computer Architecture",
+      "question": "What is an opcode?",
+      "answer": "An opcode is the part of an instruction that tells the CPU what operation to perform."
+    },
+    {
+      "id": "3.1-025",
+      "category": "Chapter 3",
+      "subchapter": "3.1 Computer Architecture",
+      "question": "What is an operand?",
+      "answer": "An operand is the data, address or register used by the instruction."
+    },
+    {
+      "id": "3.1-026",
+      "category": "Chapter 3",
+      "subchapter": "3.1 Computer Architecture",
+      "question": "What is an embedded system?",
+      "answer": "An embedded system is a computer system designed to perform one dedicated function."
+    },
+    {
+      "id": "3.1-027",
+      "category": "Chapter 3",
+      "subchapter": "3.1 Computer Architecture",
+      "question": "How is an embedded system different from a general-purpose computer?",
+      "answer": "An embedded system is designed for one dedicated task, while a general-purpose computer can perform many different tasks."
+    },
+    {
+      "id": "3.2-001",
+      "category": "Chapter 3",
+      "subchapter": "3.2 Input and Output Devices",
+      "question": "What is an input device?",
+      "answer": "An input device is hardware used to enter data into a computer system."
+    },
+    {
+      "id": "3.2-002",
+      "category": "Chapter 3",
+      "subchapter": "3.2 Input and Output Devices",
+      "question": "What is an output device?",
+      "answer": "An output device is hardware used to present the results of computer processing."
+    },
+    {
+      "id": "3.2-003",
+      "category": "Chapter 3",
+      "subchapter": "3.2 Input and Output Devices",
+      "question": "How does a barcode scanner work?",
+      "answer": "A barcode scanner shines light on the barcode, detects reflected light from the bars and spaces, and converts the pattern into digital data."
+    },
+    {
+      "id": "3.2-004",
+      "category": "Chapter 3",
+      "subchapter": "3.2 Input and Output Devices",
+      "question": "What is the main advantage of a QR code over a barcode?",
+      "answer": "A QR code can store much more data than a normal barcode."
+    },
+    {
+      "id": "3.2-005",
+      "category": "Chapter 3",
+      "subchapter": "3.2 Input and Output Devices",
+      "question": "How does a keyboard work as an input device?",
+      "answer": "When a key is pressed, a circuit is completed, the CPU identifies the key, and the corresponding code is processed."
+    },
+    {
+      "id": "3.2-006",
+      "category": "Chapter 3",
+      "subchapter": "3.2 Input and Output Devices",
+      "question": "How does a microphone work as an input device?",
+      "answer": "A microphone converts sound waves into electrical signals, which are then converted into digital data."
+    },
+    {
+      "id": "3.2-007",
+      "category": "Chapter 3",
+      "subchapter": "3.2 Input and Output Devices",
+      "question": "How does an optical mouse detect movement?",
+      "answer": "An optical mouse uses an LED and a sensor to compare reflected images and detect movement."
+    },
+    {
+      "id": "3.2-008",
+      "category": "Chapter 3",
+      "subchapter": "3.2 Input and Output Devices",
+      "question": "What is OCR used for with a 2D scanner?",
+      "answer": "OCR is used to convert scanned text images into editable text."
+    },
+    {
+      "id": "3.2-009",
+      "category": "Chapter 3",
+      "subchapter": "3.2 Input and Output Devices",
+      "question": "What does an actuator do?",
+      "answer": "An actuator converts electrical signals into physical movement."
+    },
+    {
+      "id": "3.2-010",
+      "category": "Chapter 3",
+      "subchapter": "3.2 Input and Output Devices",
+      "question": "How does a speaker work?",
+      "answer": "A speaker converts electrical signals into sound waves."
+    },
+    {
+      "id": "3.2-011",
+      "category": "Chapter 3",
+      "subchapter": "3.2 Input and Output Devices",
+      "question": "What does a 3D printer do?",
+      "answer": "A 3D printer creates a physical object from a digital 3D model."
+    },
+    {
+      "id": "3.2-012",
+      "category": "Chapter 3",
+      "subchapter": "3.2 Input and Output Devices",
+      "question": "What is a sensor?",
+      "answer": "A sensor is an input device that measures a physical quantity and converts it into data that a computer can process."
+    },
+    {
+      "id": "3.2-013",
+      "category": "Chapter 3",
+      "subchapter": "3.2 Input and Output Devices",
+      "question": "What does a temperature sensor measure?",
+      "answer": "A temperature sensor measures heat or temperature."
+    },
+    {
+      "id": "3.2-014",
+      "category": "Chapter 3",
+      "subchapter": "3.2 Input and Output Devices",
+      "question": "What does a pressure sensor measure?",
+      "answer": "A pressure sensor measures pressure."
+    },
+    {
+      "id": "3.2-015",
+      "category": "Chapter 3",
+      "subchapter": "3.2 Input and Output Devices",
+      "question": "What does a light sensor measure?",
+      "answer": "A light sensor measures light intensity."
+    },
+    {
+      "id": "3.2-016",
+      "category": "Chapter 3",
+      "subchapter": "3.2 Input and Output Devices",
+      "question": "What does a humidity sensor measure?",
+      "answer": "A humidity sensor measures the amount of water vapour in the air."
+    },
+    {
+      "id": "3.2-017",
+      "category": "Chapter 3",
+      "subchapter": "3.2 Input and Output Devices",
+      "question": "What does a proximity sensor do?",
+      "answer": "A proximity sensor detects the presence or distance of a nearby object."
+    },
+    {
+      "id": "3.2-018",
+      "category": "Chapter 3",
+      "subchapter": "3.2 Input and Output Devices",
+      "question": "What does a pH sensor measure?",
+      "answer": "A pH sensor measures acidity or alkalinity."
+    },
+    {
+      "id": "3.3-001",
+      "category": "Chapter 3",
+      "subchapter": "3.3 Data Storage",
+      "question": "What is primary storage?",
+      "answer": "Primary storage is storage directly accessed by the CPU."
+    },
+    {
+      "id": "3.3-002",
+      "category": "Chapter 3",
+      "subchapter": "3.3 Data Storage",
+      "question": "What is RAM?",
+      "answer": "RAM stands for Random Access Memory. It is volatile memory used to store programs and data currently in use."
+    },
+    {
+      "id": "3.3-003",
+      "category": "Chapter 3",
+      "subchapter": "3.3 Data Storage",
+      "question": "What is ROM?",
+      "answer": "ROM stands for Read Only Memory. It is non-volatile memory that stores start-up firmware or boot instructions."
+    },
+    {
+      "id": "3.3-004",
+      "category": "Chapter 3",
+      "subchapter": "3.3 Data Storage",
+      "question": "Why is RAM described as volatile?",
+      "answer": "Because its contents are lost when the power is turned off."
+    },
+    {
+      "id": "3.3-005",
+      "category": "Chapter 3",
+      "subchapter": "3.3 Data Storage",
+      "question": "Why is ROM described as non-volatile?",
+      "answer": "Because its contents remain even when the power is turned off."
+    },
+    {
+      "id": "3.3-006",
+      "category": "Chapter 3",
+      "subchapter": "3.3 Data Storage",
+      "question": "Why are both RAM and ROM needed?",
+      "answer": "RAM is needed for temporary working storage while the computer is running, and ROM is needed to store permanent start-up instructions."
+    },
+    {
+      "id": "3.3-007",
+      "category": "Chapter 3",
+      "subchapter": "3.3 Data Storage",
+      "question": "What is secondary storage?",
+      "answer": "Secondary storage is permanent storage that is not directly accessed by the CPU."
+    },
+    {
+      "id": "3.3-008",
+      "category": "Chapter 3",
+      "subchapter": "3.3 Data Storage",
+      "question": "What is magnetic storage?",
+      "answer": "Magnetic storage stores data using magnetised areas on a medium such as a hard disk or magnetic tape."
+    },
+    {
+      "id": "3.3-009",
+      "category": "Chapter 3",
+      "subchapter": "3.3 Data Storage",
+      "question": "What is optical storage?",
+      "answer": "Optical storage uses a laser to read and write data on media such as CDs, DVDs and Blu-ray discs."
+    },
+    {
+      "id": "3.3-010",
+      "category": "Chapter 3",
+      "subchapter": "3.3 Data Storage",
+      "question": "What is solid-state storage?",
+      "answer": "Solid-state storage stores data electronically using flash memory, for example in SSDs and USB flash drives."
+    },
+    {
+      "id": "3.3-011",
+      "category": "Chapter 3",
+      "subchapter": "3.3 Data Storage",
+      "question": "What is virtual memory?",
+      "answer": "Virtual memory is part of secondary storage used as if it were RAM when RAM is full."
+    },
+    {
+      "id": "3.3-012",
+      "category": "Chapter 3",
+      "subchapter": "3.3 Data Storage",
+      "question": "Why is virtual memory slower than RAM?",
+      "answer": "Because virtual memory uses secondary storage, which is slower than RAM."
+    },
+    {
+      "id": "3.3-013",
+      "category": "Chapter 3",
+      "subchapter": "3.3 Data Storage",
+      "question": "What is cloud storage?",
+      "answer": "Cloud storage means storing data on remote servers accessed through the internet."
+    },
+    {
+      "id": "3.3-014",
+      "category": "Chapter 3",
+      "subchapter": "3.3 Data Storage",
+      "question": "Give one advantage of cloud storage.",
+      "answer": "One advantage is that files can be accessed remotely from different devices."
+    },
+    {
+      "id": "3.3-015",
+      "category": "Chapter 3",
+      "subchapter": "3.3 Data Storage",
+      "question": "Give one disadvantage of cloud storage.",
+      "answer": "One disadvantage is that it depends on internet access."
+    },
+    {
+      "id": "3.4-001",
+      "category": "Chapter 3",
+      "subchapter": "3.4 Network Hardware",
+      "question": "What is a NIC?",
+      "answer": "A NIC, or Network Interface Card, is hardware that allows a computer to connect to a network."
+    },
+    {
+      "id": "3.4-002",
+      "category": "Chapter 3",
+      "subchapter": "3.4 Network Hardware",
+      "question": "What is a MAC address?",
+      "answer": "A MAC address is a unique identifier for a network device or network interface."
+    },
+    {
+      "id": "3.4-003",
+      "category": "Chapter 3",
+      "subchapter": "3.4 Network Hardware",
+      "question": "How is a MAC address usually written?",
+      "answer": "A MAC address is usually written in hexadecimal."
+    },
+    {
+      "id": "3.4-004",
+      "category": "Chapter 3",
+      "subchapter": "3.4 Network Hardware",
+      "question": "What is an IP address?",
+      "answer": "An IP address is an address assigned to a device on a network so it can be identified and communicate."
+    },
+    {
+      "id": "3.4-005",
+      "category": "Chapter 3",
+      "subchapter": "3.4 Network Hardware",
+      "question": "What is a static IP address?",
+      "answer": "A static IP address is a fixed address that does not normally change."
+    },
+    {
+      "id": "3.4-006",
+      "category": "Chapter 3",
+      "subchapter": "3.4 Network Hardware",
+      "question": "What is a dynamic IP address?",
+      "answer": "A dynamic IP address is assigned automatically and can change over time."
+    },
+    {
+      "id": "3.4-007",
+      "category": "Chapter 3",
+      "subchapter": "3.4 Network Hardware",
+      "question": "What is IPv4?",
+      "answer": "IPv4 is a 32-bit version of the Internet Protocol, usually written in denary form."
+    },
+    {
+      "id": "3.4-008",
+      "category": "Chapter 3",
+      "subchapter": "3.4 Network Hardware",
+      "question": "What is IPv6?",
+      "answer": "IPv6 is a 128-bit version of the Internet Protocol, written in hexadecimal groups."
+    },
+    {
+      "id": "3.4-009",
+      "category": "Chapter 3",
+      "subchapter": "3.4 Network Hardware",
+      "question": "Why was IPv6 introduced?",
+      "answer": "IPv6 was introduced because IPv4 does not provide enough unique addresses for all devices."
+    },
+    {
+      "id": "3.4-010",
+      "category": "Chapter 3",
+      "subchapter": "3.4 Network Hardware",
+      "question": "What does a router do?",
+      "answer": "A router sends data to a specific destination on a network."
+    },
+    {
+      "id": "3.4-011",
+      "category": "Chapter 3",
+      "subchapter": "3.4 Network Hardware",
+      "question": "What else can a router do besides routing packets?",
+      "answer": "A router can connect a local network to the internet and assign IP addresses to devices on the local network."
+    }
+  ],
+  "chapter4": [
+    {
+      "id": "4.1-001",
+      "category": "Chapter 4",
+      "subchapter": "4.1 Types of Software and Interrupts",
+      "question": "What is system software?",
+      "answer": "System software provides the services that the computer requires, including the operating system and utility software."
+    },
+    {
+      "id": "4.1-002",
+      "category": "Chapter 4",
+      "subchapter": "4.1 Types of Software and Interrupts",
+      "question": "What is application software?",
+      "answer": "Application software provides the services that the user requires and performs specific tasks."
+    },
+    {
+      "id": "4.1-003",
+      "category": "Chapter 4",
+      "subchapter": "4.1 Types of Software and Interrupts",
+      "question": "Give examples of system software.",
+      "answer": "Examples include the operating system, utility software and device drivers."
+    },
+    {
+      "id": "4.1-004",
+      "category": "Chapter 4",
+      "subchapter": "4.1 Types of Software and Interrupts",
+      "question": "Give examples of application software.",
+      "answer": "Examples include word processors, spreadsheets, databases, browsers and video editors."
+    },
+    {
+      "id": "4.1-005",
+      "category": "Chapter 4",
+      "subchapter": "4.1 Types of Software and Interrupts",
+      "question": "What is the role of an operating system?",
+      "answer": "The operating system manages hardware and software resources and provides a platform for running application software."
+    },
+    {
+      "id": "4.1-006",
+      "category": "Chapter 4",
+      "subchapter": "4.1 Types of Software and Interrupts",
+      "question": "What does file management mean as an operating system function?",
+      "answer": "It means creating, opening, closing, deleting, renaming, copying and moving files, and maintaining directories and access rights."
+    },
+    {
+      "id": "4.1-007",
+      "category": "Chapter 4",
+      "subchapter": "4.1 Types of Software and Interrupts",
+      "question": "What does handling interrupts mean as an operating system function?",
+      "answer": "It means responding to signals from hardware or software and running the correct interrupt service routine."
+    },
+    {
+      "id": "4.1-008",
+      "category": "Chapter 4",
+      "subchapter": "4.1 Types of Software and Interrupts",
+      "question": "What does providing an interface mean as an operating system function?",
+      "answer": "It means giving the user a way to interact with the computer, such as a GUI or CLI."
+    },
+    {
+      "id": "4.1-009",
+      "category": "Chapter 4",
+      "subchapter": "4.1 Types of Software and Interrupts",
+      "question": "What does managing peripherals and drivers mean?",
+      "answer": "It means controlling input and output devices using device drivers."
+    },
+    {
+      "id": "4.1-010",
+      "category": "Chapter 4",
+      "subchapter": "4.1 Types of Software and Interrupts",
+      "question": "What does managing memory mean?",
+      "answer": "It means keeping track of memory use, moving data between RAM and storage, and preventing clashes."
+    },
+    {
+      "id": "4.1-011",
+      "category": "Chapter 4",
+      "subchapter": "4.1 Types of Software and Interrupts",
+      "question": "What does managing multitasking mean?",
+      "answer": "It means allowing more than one process to run by sharing processor time and other resources."
+    },
+    {
+      "id": "4.1-012",
+      "category": "Chapter 4",
+      "subchapter": "4.1 Types of Software and Interrupts",
+      "question": "What does providing a platform for running applications mean?",
+      "answer": "It means the operating system allows application software to be executed."
+    },
+    {
+      "id": "4.1-013",
+      "category": "Chapter 4",
+      "subchapter": "4.1 Types of Software and Interrupts",
+      "question": "What does providing system security mean?",
+      "answer": "It means handling things such as passwords, permissions, updates and recovery tools."
+    },
+    {
+      "id": "4.1-014",
+      "category": "Chapter 4",
+      "subchapter": "4.1 Types of Software and Interrupts",
+      "question": "What does managing user accounts mean?",
+      "answer": "It means supporting separate users with their own settings and access levels."
+    },
+    {
+      "id": "4.1-015",
+      "category": "Chapter 4",
+      "subchapter": "4.1 Types of Software and Interrupts",
+      "question": "How are hardware, firmware and the operating system related when running application software?",
+      "answer": "Applications run on the operating system, the operating system runs on the firmware, and the bootloader or firmware runs on the hardware."
+    },
+    {
+      "id": "4.1-016",
+      "category": "Chapter 4",
+      "subchapter": "4.1 Types of Software and Interrupts",
+      "question": "What is firmware?",
+      "answer": "Firmware is low-level control software stored in memory, such as BIOS or a bootloader."
+    },
+    {
+      "id": "4.1-017",
+      "category": "Chapter 4",
+      "subchapter": "4.1 Types of Software and Interrupts",
+      "question": "What is an interrupt?",
+      "answer": "An interrupt is a signal from hardware or software that causes the processor to temporarily stop its current task so something urgent can be handled."
+    },
+    {
+      "id": "4.1-018",
+      "category": "Chapter 4",
+      "subchapter": "4.1 Types of Software and Interrupts",
+      "question": "What is an interrupt service routine (ISR)?",
+      "answer": "An interrupt service routine is the piece of code that handles a specific interrupt."
+    },
+    {
+      "id": "4.1-019",
+      "category": "Chapter 4",
+      "subchapter": "4.1 Types of Software and Interrupts",
+      "question": "What happens first when an interrupt occurs?",
+      "answer": "The current task is paused."
+    },
+    {
+      "id": "4.1-020",
+      "category": "Chapter 4",
+      "subchapter": "4.1 Types of Software and Interrupts",
+      "question": "What is saved when an interrupt is handled?",
+      "answer": "The status of the current task is saved, including the contents of the Program Counter and registers."
+    },
+    {
+      "id": "4.1-021",
+      "category": "Chapter 4",
+      "subchapter": "4.1 Types of Software and Interrupts",
+      "question": "What happens after the interrupt service routine finishes?",
+      "answer": "The saved register values are restored and the original task continues."
+    },
+    {
+      "id": "4.1-022",
+      "category": "Chapter 4",
+      "subchapter": "4.1 Types of Software and Interrupts",
+      "question": "Give examples of hardware interrupts.",
+      "answer": "Examples include pressing a key on the keyboard and moving the mouse."
+    },
+    {
+      "id": "4.1-023",
+      "category": "Chapter 4",
+      "subchapter": "4.1 Types of Software and Interrupts",
+      "question": "Give examples of software interrupts.",
+      "answer": "Examples include division by zero and two processes trying to access the same memory location."
+    },
+    {
+      "id": "4.2-001",
+      "category": "Chapter 4",
+      "subchapter": "4.2 Programming Languages, Translators and IDEs",
+      "question": "What is a high-level language?",
+      "answer": "A high-level language is a programming language that is closer to human language and easier for programmers to read and write."
+    },
+    {
+      "id": "4.2-002",
+      "category": "Chapter 4",
+      "subchapter": "4.2 Programming Languages, Translators and IDEs",
+      "question": "What is a low-level language?",
+      "answer": "A low-level language is a programming language that is closer to machine code and hardware."
+    },
+    {
+      "id": "4.2-003",
+      "category": "Chapter 4",
+      "subchapter": "4.2 Programming Languages, Translators and IDEs",
+      "question": "What is one advantage of a high-level language?",
+      "answer": "It is easier to read and write."
+    },
+    {
+      "id": "4.2-004",
+      "category": "Chapter 4",
+      "subchapter": "4.2 Programming Languages, Translators and IDEs",
+      "question": "What is one disadvantage of a high-level language?",
+      "answer": "It does not allow direct manipulation of hardware as easily as a low-level language."
+    },
+    {
+      "id": "4.2-005",
+      "category": "Chapter 4",
+      "subchapter": "4.2 Programming Languages, Translators and IDEs",
+      "question": "What is one advantage of a low-level language?",
+      "answer": "It allows direct manipulation of hardware."
+    },
+    {
+      "id": "4.2-006",
+      "category": "Chapter 4",
+      "subchapter": "4.2 Programming Languages, Translators and IDEs",
+      "question": "What is one disadvantage of a low-level language?",
+      "answer": "It is harder to read, write and debug."
+    },
+    {
+      "id": "4.2-007",
+      "category": "Chapter 4",
+      "subchapter": "4.2 Programming Languages, Translators and IDEs",
+      "question": "What is assembly language?",
+      "answer": "Assembly language is a form of low-level language that uses mnemonics."
+    },
+    {
+      "id": "4.2-008",
+      "category": "Chapter 4",
+      "subchapter": "4.2 Programming Languages, Translators and IDEs",
+      "question": "What are mnemonics in assembly language?",
+      "answer": "Mnemonics are short instruction codes, such as LDA, ADD and STO."
+    },
+    {
+      "id": "4.2-009",
+      "category": "Chapter 4",
+      "subchapter": "4.2 Programming Languages, Translators and IDEs",
+      "question": "What does an assembler do?",
+      "answer": "An assembler translates an assembly language program into machine code."
+    },
+    {
+      "id": "4.2-010",
+      "category": "Chapter 4",
+      "subchapter": "4.2 Programming Languages, Translators and IDEs",
+      "question": "What does a compiler do?",
+      "answer": "A compiler translates the whole high-level language program at once before execution and produces an executable file."
+    },
+    {
+      "id": "4.2-011",
+      "category": "Chapter 4",
+      "subchapter": "4.2 Programming Languages, Translators and IDEs",
+      "question": "What does an interpreter do?",
+      "answer": "An interpreter translates and executes code line by line."
+    },
+    {
+      "id": "4.2-012",
+      "category": "Chapter 4",
+      "subchapter": "4.2 Programming Languages, Translators and IDEs",
+      "question": "How does a compiler report errors?",
+      "answer": "A compiler provides an error report for the whole code if errors are detected."
+    },
+    {
+      "id": "4.2-013",
+      "category": "Chapter 4",
+      "subchapter": "4.2 Programming Languages, Translators and IDEs",
+      "question": "How does an interpreter report errors?",
+      "answer": "An interpreter stops execution when an error is found."
+    },
+    {
+      "id": "4.2-014",
+      "category": "Chapter 4",
+      "subchapter": "4.2 Programming Languages, Translators and IDEs",
+      "question": "What is one advantage of a compiler?",
+      "answer": "A compiled program can be stored ready for use and run without the compiler."
+    },
+    {
+      "id": "4.2-015",
+      "category": "Chapter 4",
+      "subchapter": "4.2 Programming Languages, Translators and IDEs",
+      "question": "What is one disadvantage of a compiler?",
+      "answer": "It usually takes longer to write, test and debug programs during development."
+    },
+    {
+      "id": "4.2-016",
+      "category": "Chapter 4",
+      "subchapter": "4.2 Programming Languages, Translators and IDEs",
+      "question": "What is one advantage of an interpreter?",
+      "answer": "It is easier and quicker to debug and test programs during development."
+    },
+    {
+      "id": "4.2-017",
+      "category": "Chapter 4",
+      "subchapter": "4.2 Programming Languages, Translators and IDEs",
+      "question": "What is one disadvantage of an interpreter?",
+      "answer": "Programs cannot be run without the interpreter and may take longer to execute."
+    },
+    {
+      "id": "4.2-018",
+      "category": "Chapter 4",
+      "subchapter": "4.2 Programming Languages, Translators and IDEs",
+      "question": "When is an interpreter mostly used according to the syllabus?",
+      "answer": "An interpreter is mostly used when developing a program."
+    },
+    {
+      "id": "4.2-019",
+      "category": "Chapter 4",
+      "subchapter": "4.2 Programming Languages, Translators and IDEs",
+      "question": "When is a compiler mostly used according to the syllabus?",
+      "answer": "A compiler is used to translate the final version of the program."
+    },
+    {
+      "id": "4.2-020",
+      "category": "Chapter 4",
+      "subchapter": "4.2 Programming Languages, Translators and IDEs",
+      "question": "What is an IDE?",
+      "answer": "An IDE, or Integrated Development Environment, is software used to help write, test and debug program code."
+    },
+    {
+      "id": "4.2-021",
+      "category": "Chapter 4",
+      "subchapter": "4.2 Programming Languages, Translators and IDEs",
+      "question": "What is the role of an IDE?",
+      "answer": "Its role is to help programmers write, run, test and debug programs more efficiently."
+    },
+    {
+      "id": "4.2-022",
+      "category": "Chapter 4",
+      "subchapter": "4.2 Programming Languages, Translators and IDEs",
+      "question": "What is a code editor in an IDE?",
+      "answer": "A code editor is the part of an IDE used to write and edit program code."
+    },
+    {
+      "id": "4.2-023",
+      "category": "Chapter 4",
+      "subchapter": "4.2 Programming Languages, Translators and IDEs",
+      "question": "What is a run-time environment in an IDE?",
+      "answer": "A run-time environment allows the program to be run from inside the IDE."
+    },
+    {
+      "id": "4.2-024",
+      "category": "Chapter 4",
+      "subchapter": "4.2 Programming Languages, Translators and IDEs",
+      "question": "What does translator mean as an IDE feature?",
+      "answer": "It means the IDE includes a compiler and/or interpreter to translate code."
+    },
+    {
+      "id": "4.2-025",
+      "category": "Chapter 4",
+      "subchapter": "4.2 Programming Languages, Translators and IDEs",
+      "question": "What are error diagnostics in an IDE?",
+      "answer": "Error diagnostics identify possible errors and show messages to help the programmer correct them."
+    },
+    {
+      "id": "4.2-026",
+      "category": "Chapter 4",
+      "subchapter": "4.2 Programming Languages, Translators and IDEs",
+      "question": "What is auto-completion in an IDE?",
+      "answer": "Auto-completion suggests variable names, commands and reserved words while typing."
+    },
+    {
+      "id": "4.2-027",
+      "category": "Chapter 4",
+      "subchapter": "4.2 Programming Languages, Translators and IDEs",
+      "question": "What is auto-correction in an IDE?",
+      "answer": "Auto-correction suggests or makes corrections while the code is being typed."
+    },
+    {
+      "id": "4.2-028",
+      "category": "Chapter 4",
+      "subchapter": "4.2 Programming Languages, Translators and IDEs",
+      "question": "What is prettyprint in an IDE?",
+      "answer": "Prettyprint lays out and colour-codes code in a meaningful and readable way."
+    }
+  ],
+  "chapter5": [
+  {
+    "id": "5.1-001",
+    "category": "Chapter 5",
+    "subchapter": "5.1 The Internet and the World Wide Web",
+    "question": "What is the difference between the internet and the World Wide Web?",
+    "answer": "The internet is the infrastructure: a worldwide collection of interconnected networks. The World Wide Web is the collection of websites and web pages accessed using the internet."
+  },
+  {
+    "id": "5.1-002",
+    "category": "Chapter 5",
+    "subchapter": "5.1 The Internet and the World Wide Web",
+    "question": "What is a URL?",
+    "answer": "A URL, or Uniform Resource Locator, is a text-based address for a web page or file."
+  },
+  {
+    "id": "5.1-003",
+    "category": "Chapter 5",
+    "subchapter": "5.1 The Internet and the World Wide Web",
+    "question": "What can a URL contain?",
+    "answer": "A URL can contain the protocol, the domain name and the web page or file name."
+  },
+  {
+    "id": "5.1-004",
+    "category": "Chapter 5",
+    "subchapter": "5.1 The Internet and the World Wide Web",
+    "question": "What does HTTP stand for?",
+    "answer": "HyperText Transfer Protocol."
+  },
+  {
+    "id": "5.1-005",
+    "category": "Chapter 5",
+    "subchapter": "5.1 The Internet and the World Wide Web",
+    "question": "What is the purpose of HTTP?",
+    "answer": "HTTP is the set of rules used to transfer web files across the internet."
+  },
+  {
+    "id": "5.1-006",
+    "category": "Chapter 5",
+    "subchapter": "5.1 The Internet and the World Wide Web",
+    "question": "What does HTTPS stand for?",
+    "answer": "HyperText Transfer Protocol Secure."
+  },
+  {
+    "id": "5.1-007",
+    "category": "Chapter 5",
+    "subchapter": "5.1 The Internet and the World Wide Web",
+    "question": "What is the difference between HTTP and HTTPS?",
+    "answer": "HTTPS is the secure version of HTTP and is used when data needs more secure transfer."
+  },
+  {
+    "id": "5.1-008",
+    "category": "Chapter 5",
+    "subchapter": "5.1 The Internet and the World Wide Web",
+    "question": "What is the main purpose of a web browser?",
+    "answer": "The main purpose of a web browser is to render HTML and display web pages."
+  },
+  {
+    "id": "5.1-009",
+    "category": "Chapter 5",
+    "subchapter": "5.1 The Internet and the World Wide Web",
+    "question": "What functions does a web browser provide?",
+    "answer": "Functions include storing bookmarks and favourites, recording user history, allowing use of multiple tabs, storing cookies, providing navigation tools and providing an address bar."
+  },
+  {
+    "id": "5.1-010",
+    "category": "Chapter 5",
+    "subchapter": "5.1 The Internet and the World Wide Web",
+    "question": "What happens first when a user enters a URL?",
+    "answer": "The web browser uses the URL to start locating the web page."
+  },
+  {
+    "id": "5.1-011",
+    "category": "Chapter 5",
+    "subchapter": "5.1 The Internet and the World Wide Web",
+    "question": "What is the role of DNS when retrieving a web page?",
+    "answer": "DNS converts the domain name into the correct IP address."
+  },
+  {
+    "id": "5.1-012",
+    "category": "Chapter 5",
+    "subchapter": "5.1 The Internet and the World Wide Web",
+    "question": "What is the role of the IP address when retrieving a web page?",
+    "answer": "The IP address identifies the web server so the browser can connect to it."
+  },
+  {
+    "id": "5.1-013",
+    "category": "Chapter 5",
+    "subchapter": "5.1 The Internet and the World Wide Web",
+    "question": "What is the role of the web server when retrieving a web page?",
+    "answer": "The web server sends the HTML and other page resources back to the browser."
+  },
+  {
+    "id": "5.1-014",
+    "category": "Chapter 5",
+    "subchapter": "5.1 The Internet and the World Wide Web",
+    "question": "What is the role of HTML when displaying a web page?",
+    "answer": "HTML is interpreted by the browser so the web page can be displayed on the device."
+  },
+  {
+    "id": "5.1-015",
+    "category": "Chapter 5",
+    "subchapter": "5.1 The Internet and the World Wide Web",
+    "question": "What are cookies?",
+    "answer": "Cookies are small files or pieces of code stored on a user’s device by websites."
+  },
+  {
+    "id": "5.1-016",
+    "category": "Chapter 5",
+    "subchapter": "5.1 The Internet and the World Wide Web",
+    "question": "What is a session cookie?",
+    "answer": "A session cookie is temporary and is usually deleted when the browser is closed or the session ends."
+  },
+  {
+    "id": "5.1-017",
+    "category": "Chapter 5",
+    "subchapter": "5.1 The Internet and the World Wide Web",
+    "question": "What is a persistent cookie?",
+    "answer": "A persistent cookie is stored on the user’s device until it expires or is manually deleted."
+  },
+  {
+    "id": "5.1-018",
+    "category": "Chapter 5",
+    "subchapter": "5.1 The Internet and the World Wide Web",
+    "question": "How are cookies used?",
+    "answer": "Cookies are used for functions such as saving personal details, tracking user preferences, holding items in an online shopping cart and storing login details."
+  },
+  {
+    "id": "5.2-001",
+    "category": "Chapter 5",
+    "subchapter": "5.2 Digital Currency",
+    "question": "What is a digital currency?",
+    "answer": "A digital currency is one that only exists electronically."
+  },
+  {
+    "id": "5.2-002",
+    "category": "Chapter 5",
+    "subchapter": "5.2 Digital Currency",
+    "question": "How are digital currencies used?",
+    "answer": "Digital currencies are used electronically to transfer value and make transactions."
+  },
+  {
+    "id": "5.2-003",
+    "category": "Chapter 5",
+    "subchapter": "5.2 Digital Currency",
+    "question": "What is blockchain in its basic form?",
+    "answer": "Blockchain is a digital ledger: a time-stamped series of records that cannot be altered."
+  },
+  {
+    "id": "5.2-004",
+    "category": "Chapter 5",
+    "subchapter": "5.2 Digital Currency",
+    "question": "How is blockchain used with digital currency?",
+    "answer": "Blockchain is used to track digital currency transactions."
+  },
+  {
+    "id": "5.2-005",
+    "category": "Chapter 5",
+    "subchapter": "5.2 Digital Currency",
+    "question": "Why is blockchain considered secure?",
+    "answer": "Because it is a time-stamped ledger of linked records that cannot easily be altered."
+  },
+  {
+    "id": "5.3-001",
+    "category": "Chapter 5",
+    "subchapter": "5.3 Cyber Security",
+    "question": "What is a brute-force attack?",
+    "answer": "A brute-force attack is when many password combinations are systematically tried until the correct one is found."
+  },
+  {
+    "id": "5.3-002",
+    "category": "Chapter 5",
+    "subchapter": "5.3 Cyber Security",
+    "question": "What is data interception?",
+    "answer": "Data interception is stealing or capturing data as it is being transmitted."
+  },
+  {
+    "id": "5.3-003",
+    "category": "Chapter 5",
+    "subchapter": "5.3 Cyber Security",
+    "question": "What is a DDoS attack?",
+    "answer": "A distributed denial of service attack floods a target with traffic so it cannot cope with legitimate requests."
+  },
+  {
+    "id": "5.3-004",
+    "category": "Chapter 5",
+    "subchapter": "5.3 Cyber Security",
+    "question": "What is hacking?",
+    "answer": "Hacking is gaining unauthorised access to a computer system."
+  },
+  {
+    "id": "5.3-005",
+    "category": "Chapter 5",
+    "subchapter": "5.3 Cyber Security",
+    "question": "What is malware?",
+    "answer": "Malware is malicious software designed to damage, disrupt or gain unauthorised access to a system."
+  },
+  {
+    "id": "5.3-006",
+    "category": "Chapter 5",
+    "subchapter": "5.3 Cyber Security",
+    "question": "What is a virus?",
+    "answer": "A virus is malware that replicates and needs a host program in order to run."
+  },
+  {
+    "id": "5.3-007",
+    "category": "Chapter 5",
+    "subchapter": "5.3 Cyber Security",
+    "question": "What is a worm?",
+    "answer": "A worm is standalone malware that can self-replicate across networks."
+  },
+  {
+    "id": "5.3-008",
+    "category": "Chapter 5",
+    "subchapter": "5.3 Cyber Security",
+    "question": "What is a Trojan horse?",
+    "answer": "A Trojan horse is malicious software disguised as legitimate software."
+  },
+  {
+    "id": "5.3-009",
+    "category": "Chapter 5",
+    "subchapter": "5.3 Cyber Security",
+    "question": "What is spyware?",
+    "answer": "Spyware is malware that secretly monitors activity and sends information back to the attacker."
+  },
+  {
+    "id": "5.3-010",
+    "category": "Chapter 5",
+    "subchapter": "5.3 Cyber Security",
+    "question": "What is adware?",
+    "answer": "Adware is software that displays unwanted advertising."
+  },
+  {
+    "id": "5.3-011",
+    "category": "Chapter 5",
+    "subchapter": "5.3 Cyber Security",
+    "question": "What is ransomware?",
+    "answer": "Ransomware is malware that encrypts files and demands money to unlock them."
+  },
+  {
+    "id": "5.3-012",
+    "category": "Chapter 5",
+    "subchapter": "5.3 Cyber Security",
+    "question": "What is pharming?",
+    "answer": "Pharming redirects a user to a fake website, often without the user realising it."
+  },
+  {
+    "id": "5.3-013",
+    "category": "Chapter 5",
+    "subchapter": "5.3 Cyber Security",
+    "question": "What is phishing?",
+    "answer": "Phishing uses fake communications to trick users into revealing personal or security information."
+  },
+  {
+    "id": "5.3-014",
+    "category": "Chapter 5",
+    "subchapter": "5.3 Cyber Security",
+    "question": "What is social engineering?",
+    "answer": "Social engineering is manipulating people into ignoring good security practice."
+  },
+  {
+    "id": "5.3-015",
+    "category": "Chapter 5",
+    "subchapter": "5.3 Cyber Security",
+    "question": "What are access levels used for?",
+    "answer": "Access levels are used to give different users different permissions."
+  },
+  {
+    "id": "5.3-016",
+    "category": "Chapter 5",
+    "subchapter": "5.3 Cyber Security",
+    "question": "What does anti-malware do?",
+    "answer": "Anti-malware detects and removes malicious software."
+  },
+  {
+    "id": "5.3-017",
+    "category": "Chapter 5",
+    "subchapter": "5.3 Cyber Security",
+    "question": "What is authentication?",
+    "answer": "Authentication is proving that a user is who they claim to be."
+  },
+  {
+    "id": "5.3-018",
+    "category": "Chapter 5",
+    "subchapter": "5.3 Cyber Security",
+    "question": "What authentication methods are named in the syllabus?",
+    "answer": "Username and password, biometrics and two-step verification."
+  },
+  {
+    "id": "5.3-019",
+    "category": "Chapter 5",
+    "subchapter": "5.3 Cyber Security",
+    "question": "Why are automatic software updates important for cyber security?",
+    "answer": "They install security patches and improvements automatically."
+  },
+  {
+    "id": "5.3-020",
+    "category": "Chapter 5",
+    "subchapter": "5.3 Cyber Security",
+    "question": "Why should users check the spelling and tone of communications?",
+    "answer": "Because poor spelling or suspicious tone can help identify scams such as phishing."
+  },
+  {
+    "id": "5.3-021",
+    "category": "Chapter 5",
+    "subchapter": "5.3 Cyber Security",
+    "question": "Why should users check the URL attached to a link?",
+    "answer": "Because fake or suspicious URLs can reveal scams and malicious websites."
+  },
+  {
+    "id": "5.3-022",
+    "category": "Chapter 5",
+    "subchapter": "5.3 Cyber Security",
+    "question": "What does a firewall do?",
+    "answer": "A firewall filters traffic in and out of a system or network."
+  },
+  {
+    "id": "5.3-023",
+    "category": "Chapter 5",
+    "subchapter": "5.3 Cyber Security",
+    "question": "What are privacy settings used for?",
+    "answer": "Privacy settings are used to control what information others can access or see."
+  },
+  {
+    "id": "5.3-024",
+    "category": "Chapter 5",
+    "subchapter": "5.3 Cyber Security",
+    "question": "What is a proxy server used for?",
+    "answer": "A proxy server acts between the user and the internet and can filter access or mask identity."
+  },
+  {
+    "id": "5.3-025",
+    "category": "Chapter 5",
+    "subchapter": "5.3 Cyber Security",
+    "question": "What does SSL stand for?",
+    "answer": "Secure Socket Layer."
+  },
+  {
+    "id": "5.3-026",
+    "category": "Chapter 5",
+    "subchapter": "5.3 Cyber Security",
+    "question": "What is SSL used for?",
+    "answer": "SSL is a security protocol used to encrypt data sent over the web."
+  }
+],
+"chapter6": [
+  {
+    "id": "6.1-001",
+    "category": "Chapter 6",
+    "subchapter": "6.1 Automated Systems",
+    "question": "How can sensors, microprocessors and actuators be used together in an automated system?",
+    "answer": "Sensors collect data from the environment, the microprocessor processes the data and decides what action is needed, and actuators carry out the physical action."
+  },
+  {
+    "id": "6.1-002",
+    "category": "Chapter 6",
+    "subchapter": "6.1 Automated Systems",
+    "question": "What is the role of a sensor in an automated system?",
+    "answer": "A sensor measures conditions in the environment and sends readings to a computer or microprocessor."
+  },
+  {
+    "id": "6.1-003",
+    "category": "Chapter 6",
+    "subchapter": "6.1 Automated Systems",
+    "question": "What is the role of a microprocessor in an automated system?",
+    "answer": "The microprocessor processes the sensor data and decides what action to take according to the program."
+  },
+  {
+    "id": "6.1-004",
+    "category": "Chapter 6",
+    "subchapter": "6.1 Automated Systems",
+    "question": "What is the role of an actuator in an automated system?",
+    "answer": "An actuator carries out a physical action, such as opening a valve, moving a wheel or turning a pump."
+  },
+  {
+    "id": "6.1-005",
+    "category": "Chapter 6",
+    "subchapter": "6.1 Automated Systems",
+    "question": "What must you be able to do with automated systems in the exam?",
+    "answer": "You must be able to describe how sensors, microprocessors and actuators work together and explain the advantages and disadvantages of an automated system in a given scenario."
+  },
+  {
+    "id": "6.1-006",
+    "category": "Chapter 6",
+    "subchapter": "6.1 Automated Systems",
+    "question": "Which automated system scenarios are included in the syllabus?",
+    "answer": "Industry, transport, agriculture, weather, gaming, lighting and science."
+  },
+  {
+    "id": "6.1-007",
+    "category": "Chapter 6",
+    "subchapter": "6.1 Automated Systems",
+    "question": "Give one advantage of an automated system.",
+    "answer": "An automated system can respond faster than a human."
+  },
+  {
+    "id": "6.1-008",
+    "category": "Chapter 6",
+    "subchapter": "6.1 Automated Systems",
+    "question": "Give one more advantage of an automated system.",
+    "answer": "It can produce more consistent results."
+  },
+  {
+    "id": "6.1-009",
+    "category": "Chapter 6",
+    "subchapter": "6.1 Automated Systems",
+    "question": "Give one disadvantage of an automated system.",
+    "answer": "It can be expensive to install and maintain."
+  },
+  {
+    "id": "6.1-010",
+    "category": "Chapter 6",
+    "subchapter": "6.1 Automated Systems",
+    "question": "Give another disadvantage of an automated system.",
+    "answer": "If the software or hardware fails, the system may stop working correctly."
+  },
+  {
+    "id": "6.2-001",
+    "category": "Chapter 6",
+    "subchapter": "6.2 Robotics",
+    "question": "What is meant by robotics?",
+    "answer": "Robotics is a branch of computer science that incorporates the design, construction and operation of robots."
+  },
+  {
+    "id": "6.2-002",
+    "category": "Chapter 6",
+    "subchapter": "6.2 Robotics",
+    "question": "What examples of robots are mentioned in the syllabus?",
+    "answer": "Factory equipment, domestic robots and drones."
+  },
+  {
+    "id": "6.2-003",
+    "category": "Chapter 6",
+    "subchapter": "6.2 Robotics",
+    "question": "What are the main characteristics of a robot?",
+    "answer": "A robot has a mechanical structure or framework, electrical components such as sensors, microprocessors and actuators, and it is programmable."
+  },
+  {
+    "id": "6.2-004",
+    "category": "Chapter 6",
+    "subchapter": "6.2 Robotics",
+    "question": "What does it mean that a robot has a mechanical structure or framework?",
+    "answer": "It means the robot has physical parts, such as wheels, arms, gears or other moving components."
+  },
+  {
+    "id": "6.2-005",
+    "category": "Chapter 6",
+    "subchapter": "6.2 Robotics",
+    "question": "What electrical components can a robot include?",
+    "answer": "Sensors, microprocessors and actuators."
+  },
+  {
+    "id": "6.2-006",
+    "category": "Chapter 6",
+    "subchapter": "6.2 Robotics",
+    "question": "Why is programmability an important characteristic of a robot?",
+    "answer": "Because the robot must be controlled by software or stored instructions."
+  },
+  {
+    "id": "6.2-007",
+    "category": "Chapter 6",
+    "subchapter": "6.2 Robotics",
+    "question": "In which areas can robots be used according to the syllabus?",
+    "answer": "Industry, transport, agriculture, medicine, domestic use and entertainment."
+  },
+  {
+    "id": "6.2-008",
+    "category": "Chapter 6",
+    "subchapter": "6.2 Robotics",
+    "question": "What must you be able to describe about robots in the exam?",
+    "answer": "You must understand the roles that robots can perform and describe the advantages and disadvantages of their use."
+  },
+  {
+    "id": "6.2-009",
+    "category": "Chapter 6",
+    "subchapter": "6.2 Robotics",
+    "question": "Give one advantage of using robots.",
+    "answer": "Robots can work continuously without getting tired."
+  },
+  {
+    "id": "6.2-010",
+    "category": "Chapter 6",
+    "subchapter": "6.2 Robotics",
+    "question": "Give another advantage of using robots.",
+    "answer": "Robots can work in dangerous environments where humans may be at risk."
+  },
+  {
+    "id": "6.2-011",
+    "category": "Chapter 6",
+    "subchapter": "6.2 Robotics",
+    "question": "Give one disadvantage of using robots.",
+    "answer": "Robots can be expensive to buy, install and maintain."
+  },
+  {
+    "id": "6.2-012",
+    "category": "Chapter 6",
+    "subchapter": "6.2 Robotics",
+    "question": "Give another disadvantage of using robots.",
+    "answer": "Robots can reduce the need for human workers in some jobs."
+  },
+  {
+    "id": "6.3-001",
+    "category": "Chapter 6",
+    "subchapter": "6.3 Artificial Intelligence",
+    "question": "What is meant by artificial intelligence (AI)?",
+    "answer": "Artificial intelligence is a branch of computer science dealing with the simulation of intelligent behaviours by computers."
+  },
+  {
+    "id": "6.3-002",
+    "category": "Chapter 6",
+    "subchapter": "6.3 Artificial Intelligence",
+    "question": "What are the main characteristics of AI?",
+    "answer": "AI involves the collection of data, rules for using that data, the ability to reason, and it can include the ability to learn and adapt."
+  },
+  {
+    "id": "6.3-003",
+    "category": "Chapter 6",
+    "subchapter": "6.3 Artificial Intelligence",
+    "question": "What does it mean that AI can reason?",
+    "answer": "It means AI can use data and rules to make decisions or reach conclusions."
+  },
+  {
+    "id": "6.3-004",
+    "category": "Chapter 6",
+    "subchapter": "6.3 Artificial Intelligence",
+    "question": "What does it mean that AI can learn and adapt?",
+    "answer": "It means AI can improve or change its behaviour based on data or experience."
+  },
+  {
+    "id": "6.3-005",
+    "category": "Chapter 6",
+    "subchapter": "6.3 Artificial Intelligence",
+    "question": "Which AI systems are included in the syllabus?",
+    "answer": "Expert systems and machine learning."
+  },
+  {
+    "id": "6.3-006",
+    "category": "Chapter 6",
+    "subchapter": "6.3 Artificial Intelligence",
+    "question": "What is an expert system?",
+    "answer": "An expert system is an AI system that uses stored knowledge and rules to simulate intelligent behaviour and make decisions."
+  },
+  {
+    "id": "6.3-007",
+    "category": "Chapter 6",
+    "subchapter": "6.3 Artificial Intelligence",
+    "question": "What are the components of an expert system?",
+    "answer": "A knowledge base, a rule base, an inference engine and an interface."
+  },
+  {
+    "id": "6.3-008",
+    "category": "Chapter 6",
+    "subchapter": "6.3 Artificial Intelligence",
+    "question": "What is the knowledge base in an expert system?",
+    "answer": "The knowledge base stores facts and specialist knowledge."
+  },
+  {
+    "id": "6.3-009",
+    "category": "Chapter 6",
+    "subchapter": "6.3 Artificial Intelligence",
+    "question": "What is the rule base in an expert system?",
+    "answer": "The rule base stores the rules used to make decisions."
+  },
+  {
+    "id": "6.3-010",
+    "category": "Chapter 6",
+    "subchapter": "6.3 Artificial Intelligence",
+    "question": "What is the inference engine in an expert system?",
+    "answer": "The inference engine applies the rules to the facts in order to reach conclusions."
+  },
+  {
+    "id": "6.3-011",
+    "category": "Chapter 6",
+    "subchapter": "6.3 Artificial Intelligence",
+    "question": "What is the interface in an expert system?",
+    "answer": "The interface allows the user to enter data and receive the system’s output."
+  },
+  {
+    "id": "6.3-012",
+    "category": "Chapter 6",
+    "subchapter": "6.3 Artificial Intelligence",
+    "question": "What is machine learning?",
+    "answer": "Machine learning is when a program has the ability to automatically adapt its own processes and/or data."
+  },
+  {
+    "id": "6.3-013",
+    "category": "Chapter 6",
+    "subchapter": "6.3 Artificial Intelligence",
+    "question": "How is machine learning different from a fixed program?",
+    "answer": "A machine learning program can adapt its own processes or data automatically, rather than only following fixed instructions."
+  }
+]
+}

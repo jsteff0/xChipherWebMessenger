@@ -21,8 +21,9 @@
 	});
 </script>
 
+<div class="min-h-screen w-full flex flex-col items-center justify-center px-4 py-6">
 <div
-	class="pt-[15px] w-[390px] h-[530px] bg-[#dedfda] rounded-[36px] overflow-clip shadow-[0px_18px_40px_0px_rgba(36,60,74,0.45)] flex-col justify-start items-center inline-flex"
+	class="pt-[15px] w-[390px] max-w-full h-[530px] bg-[#dedfda] rounded-[36px] overflow-clip shadow-[0px_18px_40px_0px_rgba(36,60,74,0.45)] flex-col justify-start items-center inline-flex"
 >
 	<div
 		id="msgcontainer"
@@ -328,7 +329,8 @@
 		</button>
 	</div>
 </div>
-<div class="flex items-center justify-center opacity-40">
+<div class="mt-4 flex items-center justify-center gap-2 opacity-40">
 	<img src="/info.svg" class="w-4" alt="" />
 	<p>Key: a1f4c5b3d9e0872fb4c1a2d3e5f60789</p>
+</div>
 </div>

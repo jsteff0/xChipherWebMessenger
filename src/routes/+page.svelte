@@ -10,12 +10,12 @@
 		{ id: 2, author: "Bob", text: "Here are some links for this project:" },
 		{ id: 3, author: "Alice", text: `<a target="_blank" class="underline" href="https://t.me/XCipherLab">XCipherLab Telegram</a>` },
 		{ id: 4, author: "Bob", text: `<a target="_blank" class="underline" href="https://www.instagram.com/xcipherlab/">XCipherLab Instagram</a>` },
-		{ id: 5, author: "Alice", text: `<a target="_blank" class="underline" href="https://www.patreon.com/c/XCipherLab">XCipherLab Patreon</a>` },
-		{ id: 6, author: "Bob", text: `<a target="_blank" class="underline hover:line" href="https://github.com/jsteff0/xCipher">GitHub of xCipher</a>` },
-		{ id: 7, author: "Alice", text: `<a target="_blank" class="underline" href="https://github.com/jsteff0/xChipherWebMessenger">xCipher API</a>` },
-		{ id: 8, author: "Bob", text: `<a target="_blank" class="underline" href="/playground/">xCipher Playground</a>` },
-		{ id: 9, author: "Alice", text: `<a target="_blank" class="underline" href="/euromath2025/">Euromath page</a>` },
-		{ id: 10, author: "Bob", text: `<a target="_blank" class="underline" href="https://drive.google.com/drive/folders/1m_wAx5dk_zKpkRS35Hf41MQ-IAfQoxmx?usp=sharing">Euromath presentation and text script</a>` },
+		// { id: 5, author: "Alice", text: `<a target="_blank" class="underline" href="https://www.patreon.com/c/XCipherLab">XCipherLab Patreon</a>` },
+		{ id: 5, author: "Bob", text: `<a target="_blank" class="underline hover:line" href="https://github.com/jsteff0/xCipher">GitHub of xCipher</a>` },
+		{ id: 6, author: "Alice", text: `<a target="_blank" class="underline" href="https://github.com/jsteff0/xChipherWebMessenger">xCipher API</a>` },
+		{ id: 7, author: "Bob", text: `<a target="_blank" class="underline" href="/playground/">xCipher Playground</a>` },
+		{ id: 8, author: "Alice", text: `<a target="_blank" class="underline" href="/euromath2025/">Euromath page</a>` },
+		{ id: 9, author: "Bob", text: `<a target="_blank" class="underline" href="https://drive.google.com/drive/folders/1m_wAx5dk_zKpkRS35Hf41MQ-IAfQoxmx?usp=sharing">Euromath presentation and text script</a>` },
 	];
 
 	onMount(() => {
@@ -37,8 +37,9 @@
 	}
 </script>
 
+<div class="min-h-screen w-full flex items-center justify-center px-4">
 <div
-	class="pt-[15px] w-[390px] h-[530px] bg-[#dedfda] rounded-[36px] overflow-clip shadow-[0px_18px_40px_0px_rgba(36,60,74,0.45)] flex-col justify-start items-center inline-flex"
+	class="pt-[15px] w-[390px] max-w-full h-[530px] bg-[#dedfda] rounded-[36px] overflow-clip shadow-[0px_18px_40px_0px_rgba(36,60,74,0.45)] flex-col justify-start items-center inline-flex"
 >
 	<div
 		id="msgcontainer"
@@ -95,4 +96,5 @@
 			</p>
 		</button>
 	</div>
+</div>
 </div>
