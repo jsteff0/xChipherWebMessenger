@@ -21,11 +21,3 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
-
-# Ignore IGCSE chapter pages except chapter 1
-# /src/routes/igcse/chapter-2/
-# /src/routes/igcse/chapter-3/
-# /src/routes/igcse/chapter-4/
-# /src/routes/igcse/chapter-5/
-# /src/routes/igcse/chapter-6/
-/src/routes/routes_hidden/

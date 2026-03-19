@@ -445,7 +445,11 @@
 						</ul>
 					</section>
 				{:else if activeTab === 'tab-4'}
-					<Flashcards/>
+					<Flashcards
+						title="Flashcards"
+						chapterKey="chapter1"
+						chapterLabel="Chapter 1"
+					/>
 				{:else}
 					<section>
 						<h2 class="mb-[14px] text-[28px] leading-[1.15] font-semibold">Quick Memorise List</h2>
