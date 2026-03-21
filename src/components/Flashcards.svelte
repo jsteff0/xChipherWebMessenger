@@ -9,6 +9,16 @@
   };
 
   type FlashcardsFile = Record<string, Flashcard[] | undefined>;
+  type CardResponse = 'know' | 'dont-know';
+  type ResponseMap = Record<string, CardResponse>;
+  type SubchapterStat = {
+    code: string;
+    label: string;
+    known: number;
+    unknown: number;
+    total: number;
+    ratio: number;
+  };
 
   export let title = 'Flashcards';
   export let badges: string[] = [];
@@ -21,9 +31,12 @@
   let flashcardFlipped = false;
   let flashcardsError = '';
   let flashcardsLoaded = false;
+  let responses: ResponseMap = {};
 
   const buttonClass = 'inline-flex items-center justify-center gap-2 rounded-xl border border-[rgba(124,156,255,0.28)] bg-[rgba(124,156,255,0.12)] px-[14px] py-[10px] text-sm font-semibold text-white transition duration-200 hover:border-[rgba(124,156,255,0.48)] hover:bg-[rgba(124,156,255,0.2)] disabled:cursor-not-allowed disabled:opacity-45';
 
+    $: answeredCount = Object.keys(responses).length;
+  $: isFinished = flashcardsLoaded && flashcards.length > 0 && answeredCount === flashcards.length;
   $: currentCard = flashcards[currentFlashcardIndex] ?? null;
   $: progressWidth = flashcards.length ? ((currentFlashcardIndex + 1) / flashcards.length) * 100 : 0;
   $: progressText = flashcards.length
@@ -67,6 +80,71 @@
     flashcards = shuffleArray([...flashcards]);
     updateFlashcardIndex(0);
   }
+
+  function answerCurrentCard(answer: CardResponse): void {
+        if (!currentCard) return;
+
+    responses = {
+      ...responses,
+      [currentCard.id ?? `index-${currentFlashcardIndex}`]: answer
+    };
+    flashcardFlipped = false;
+    
+    if (currentFlashcardIndex < flashcards.length - 1) {
+      nextFlashcard();
+    }
+  }
+
+  function getSubchapterCode(card: Flashcard): string {
+    const id = card.id ?? '';
+    const match = id.match(/^(\d+\.\d+)-/);
+    if (match) return match[1];
+    return card.subchapter ?? 'Unknown';
+  }
+
+  function getSubchapterStats(): SubchapterStat[] {
+    const map = new Map<string, SubchapterStat>();
+
+    for (const card of flashcards) {
+      const code = getSubchapterCode(card);
+      const existing = map.get(code) ?? {
+        code,
+        label: code,
+        known: 0,
+        unknown: 0,
+        total: 0,
+        ratio: 0
+      };
+
+      existing.total += 1;
+
+      if (card.id && responses[card.id] === 'know') {
+        existing.known += 1;
+      }
+
+      if (card.id && responses[card.id] === 'dont-know') {
+        existing.unknown += 1;
+      }
+
+      existing.ratio = existing.total ? existing.known / existing.total : 0;
+      map.set(code, existing);
+    }
+    console.log('Subchapter stats:', [...map.values()]);
+    return [...map.values()].sort((a, b) => a.code.localeCompare(b.code, undefined, { numeric: true }));
+  }
+
+  function getBarColorClass(ratio: number): string {
+    if (ratio >= 0.75) return 'bg-[#78df43]';
+    if (ratio >= 0.4) return 'bg-[#eadf49]';
+    return 'bg-[#ff3b21]';
+  }
+
+  function resetSession(): void {
+    responses = {};
+    currentFlashcardIndex = 0;
+    flashcardFlipped = false;
+  }
+
 
   async function loadFlashcards(): Promise<void> {
     try {
@@ -123,7 +201,7 @@
         <button type="button" class={buttonClass} disabled={currentFlashcardIndex === 0 || !flashcards.length} on:click={previousFlashcard}>← Previous</button>
         <button type="button" class={buttonClass} disabled={!flashcards.length} on:click={toggleFlashcard}>Flip Card</button>
         <button type="button" class={buttonClass} disabled={flashcards.length < 2} on:click={shuffleFlashcards}>Shuffle</button>
-        <button type="button" class={buttonClass} disabled={currentFlashcardIndex === flashcards.length - 1 || !flashcards.length} on:click={nextFlashcard}>Next →</button>
+        <button type="button" class={buttonClass} on:click={resetSession}>Reset</button>
       </div>
     </div>
 
@@ -153,6 +231,51 @@
           </article>
         </div>
       </div>
+
+      {#if !isFinished}
+        <div class="flex flex-wrap gap-2.5">
+          <button type="button" class={buttonClass} on:click={() => answerCurrentCard('know')}>Know 😎</button>
+          <button type="button" class={buttonClass} on:click={() => answerCurrentCard('dont-know')}>Don't know 🧐</button>
+        </div>
+      {/if}
+
+      {#if isFinished}
+        <div class="mt-2 rounded-[22px] border border-cs-border bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-7 shadow-cs">
+          <div class="mb-6 flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <span class="mb-3 inline-block rounded-full border border-[rgba(124,156,255,0.28)] bg-[rgba(124,156,255,0.14)] px-[10px] py-[6px] text-xs text-white">Session summary</span>
+              <h3 class="m-0 text-[30px] leading-[1.15] font-semibold text-white">You answered</h3>
+            </div>
+            <div class="rounded-[16px] border border-cs-border bg-white/4 px-4 py-3 text-right">
+              <div class="text-xs uppercase tracking-[0.08em] text-cs-muted">Total progress</div>
+              <div class="mt-1 text-lg font-semibold text-white">{answeredCount} / {flashcards.length}</div>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            {#each getSubchapterStats() as stat}
+              <div class="rounded-[18px] border border-cs-border bg-white/4 p-4">
+                <div class="mb-3 flex items-center justify-between gap-4">
+                  <div>
+                    <div class="text-[15px] font-semibold text-white">Subchapter {stat.code}</div>
+                    <div class="mt-1 text-sm text-cs-muted">
+                      Known: {stat.known} • Don’t know: {stat.unknown} • Total: {stat.total}
+                    </div>
+                  </div>
+                  <div class="text-sm font-semibold text-cs-accent-2">{Math.round(stat.ratio * 100)}%</div>
+                </div>
+
+                <div class="h-[16px] overflow-hidden rounded-full border border-white/10 bg-black/20">
+                  <div
+                    class={`h-full rounded-full ${getBarColorClass(stat.ratio)}`}
+                    style:width={`${stat.ratio * 100}%`}
+                  ></div>
+                </div>
+              </div>
+            {/each}
+          </div>
+        </div>
+      {/if}
     {/if}
   </div>
 </section>
