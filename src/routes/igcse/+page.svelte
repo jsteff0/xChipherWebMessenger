@@ -137,6 +137,24 @@
             </div>
           </a>
         </article>
+        <article class="overflow-hidden rounded-[22px] border border-[rgba(255,255,255,0.12)] bg-[rgba(18,25,50,0.88)] shadow-[0_14px_40px_rgba(0,0,0,0.35)] transition-[transform,border-color,background] duration-200 ease-out hover:-translate-y-[3px] hover:border-[rgba(124,156,255,0.34)] hover:bg-[rgba(24,33,66,0.94)]">
+          <a href="/igcse/summary" class="block h-full p-5 text-inherit no-underline">
+            <div class="mb-[14px] flex items-start justify-between gap-3">
+              <h3 class="m-0 text-[21px] leading-[1.2] font-semibold text-[#eef2ff]">Summary</h3>
+              <span class="whitespace-nowrap rounded-full border border-[rgba(124,156,255,0.26)] bg-[rgba(124,156,255,0.14)] px-[10px] py-[6px] text-[12px] text-white">
+                Summary
+              </span>
+            </div>
+            <p class="mb-4 text-[14px] leading-[1.65] text-[#cfe3ff]">
+              A comprehensive summary of IGCSE Computer Science topics.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="rounded-[10px] border border-[rgba(255,255,255,0.06)] bg-[rgba(255,255,255,0.04)] px-[9px] py-[6px] text-[12px] text-[#b8c1ec]">Summary</span>
+              <span class="rounded-[10px] border border-[rgba(255,255,255,0.06)] bg-[rgba(255,255,255,0.04)] px-[9px] py-[6px] text-[12px] text-[#b8c1ec]">IGCSE</span>
+              <span class="rounded-[10px] border border-[rgba(255,255,255,0.06)] bg-[rgba(255,255,255,0.04)] px-[9px] py-[6px] text-[12px] text-[#b8c1ec]">Full Deck</span>
+            </div>
+          </a>
+        </article>
       </div>
     </section>
   </div>
