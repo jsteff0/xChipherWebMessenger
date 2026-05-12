@@ -1,71 +1,34 @@
-<div
-	class="pt-[15px] w-[390px] h-[530px] bg-[#dedfda] rounded-[36px] overflow-clip shadow-[0px_18px_40px_0px_rgba(36,60,74,0.45)] flex-col justify-start items-center inline-flex"
->
-	<div
-		id="msgcontainer"
-		class="h-full w-full px-[35px] m-[35px] overflow-y-auto"
-	>
-		<div id="msg1" class="flex justify-start items-end gap-2.5 mb-5">
-			<img src="/alicepfp.svg" class="h-full" alt="" />
-			<div>
-				<div
-					class="h-[17px] pl-2.5 justify-start items-center gap-[15px] inline-flex"
-				>
-					<p
-						class="text-[#297676] text-[15px] font-normal font-['Montserrat']"
-					>
-						Alice
-					</p>
-				</div>
-				<div
-					class="px-5 py-2.5 bg-[#297676] overflow-hidden h-auto rounded-[15px]"
-				>
-					<p
-						class="text-white text-[16px] font-normal font-['Montserrat'] break-words"
-					>
-						I think you are on the wrong page
-					</p>
-				</div>
-			</div>
-		</div>
+<script lang="ts">
+	import { page } from '$app/state';
+
+	const status = $derived(page.status || 404);
+	const message = $derived(page.error?.message || 'route not found');
+</script>
+
+<svelte:head>
+	<title>{status} | XCipherLab</title>
+	<meta name="description" content="XCipherLab terminal error page." />
+</svelte:head>
+
+<section class="terminal-panel mx-auto max-w-2xl">
+	<p class="terminal-kicker">route failure</p>
+	<h1 class="terminal-heading">{status}: SIGNAL LOST</h1>
+
+	<div class="mt-6 space-y-2 text-sm text-[#00ff41]/70">
+		<p class="terminal-glow">&gt; requested endpoint could not be resolved</p>
+		<p>&gt; status: {status}</p>
+		<p>&gt; reason: {message}</p>
+		<p>&gt; recovery routes available</p>
 	</div>
-	<div
-		class="self-stretch px-[34px] py-[19px] bg-[#d2d3cc] justify-between items-center inline-flex"
-	>
-		<input
-			id="messege"
-			class="text-[#6e6e6e] bg-transparent border-none text-base font-bold font-['Montserrat']"
-			placeholder="Message"
-		/>
 
-		<button
-
-			class="px-[18px] py-2 bg-[#297676] rounded-[14px] justify-center items-center gap-2.5 flex overflow-hidden"
-		>
-			<p
-				class="text-[#f2f2f2] text-[13px] font-semibold font-['Montserrat']"
-			>
-				Send
-			</p>
-		</button>
+	<div class="mt-6 grid gap-2 sm:grid-cols-2">
+		<a class="terminal-button text-center" href="/">MAIN TERMINAL</a>
+		<a class="terminal-button text-center" href="/playground/">PLAYGROUND</a>
 	</div>
-</div>
 
-
-<style>
-	@keyframes fadeIn {
-		from {
-			opacity: 0;
-			transform: translateY(20px);
-		}
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
-
-	#msg1 {
-		animation: fadeIn 1s ease-out;
-	}
-
-</style>
+	<div class="mt-6 rounded border border-[#00ff41]/15 bg-black/30 px-3 py-2 text-sm text-[#00ff41]/70">
+		<span class="terminal-glow">[xcipher@engine ~]$</span>
+		<span>recover --route /</span>
+		<span class="cursor-blink">_</span>
+	</div>
+</section>
